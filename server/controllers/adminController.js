@@ -1,5 +1,18 @@
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
+const logger = require("../logger");
+
+// Generate OTP
+const generateOTP = async () => {
+  const otp = Math.floor(100 + Math.random() * 900).toString(); // Generate a 3-digit OTP
+  const hashedOTP = await bcrypt.hash(otp, 10); // Hash the OTP
+  return { otp, hashedOTP };
+};
+
+// Function to validate OTP (can be used in login or verification process)
+const validateOTP = async (enteredOTP, hashedOTP) => {
+  return await bcrypt.compare(enteredOTP, hashedOTP);
+};
 
 // Change Admin Password
 exports.changeAdminPassword = async (req, res) => {
@@ -11,22 +24,29 @@ exports.changeAdminPassword = async (req, res) => {
     if (!admin) return res.status(404).json({ message: "Admin not found" });
 
     const isMatch = await admin.matchPassword(currentPassword);
-    if (!isMatch)
+    if (!isMatch) {
+      logger.error(
+        `Password change failed for ${admin.username}: Incorrect current password`
+      );
       return res.status(400).json({ message: "Current password is incorrect" });
-
+    }
     const salt = await bcrypt.genSalt(10);
     admin.password = await bcrypt.hash(newPassword, salt);
 
     await admin.save();
+    logger.info(`Admin password changed for ${admin.username}`);
     res.json({ message: "Password updated successfully" });
   } catch (error) {
+    logger.error(
+      `Error changing admin password for ${admin.username}: ${error.message}`
+    );
     console.error("Error in changeAdminPassword:", error);
     res.status(500).json({ message: "Server error" });
   }
 };
 
 exports.modifyUserAccount = async (req, res) => {
-  const { fullName, username, password } = req.body;
+  const { fullName, username, password, generateNewOTP } = req.body;
   const userId = req.params.id;
 
   try {
@@ -40,8 +60,19 @@ exports.modifyUserAccount = async (req, res) => {
       user.password = await bcrypt.hash(password, salt);
     }
 
-    await user.save();
-    res.json({ message: "User account updated successfully" });
+    // Generate OTP if explicitly requested
+    if (generateNewOTP) {
+      const { otp, hashedOTP } = await generateOTP();
+      user.otp = hashedOTP;
+      user.otpExpiry = new Date(Date.now() + 15 * 60 * 1000); // 15-minute expiration
+      await user.save();
+      return res.json({ message: "User account updated successfully", otp }); // Return OTP if generated
+    } else {
+      user.otp = null;
+      user.otpExpiry = null;
+      await user.save();
+      res.json({ message: "User account updated successfully" });
+    }
   } catch (error) {
     console.error("Error in modifyUserAccount:", error);
     res.status(500).json({ message: "Server error" });
@@ -50,7 +81,7 @@ exports.modifyUserAccount = async (req, res) => {
 
 // Add New User
 exports.addNewUser = async (req, res) => {
-  const { username, fullName, password } = req.body;
+  const { username, fullName, password, generateOTP } = req.body;
 
   try {
     const existingUser = await User.findOne({ username });
@@ -60,17 +91,28 @@ exports.addNewUser = async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    // Initialize new user object
     const newUser = new User({
       username,
       fullName,
       password: hashedPassword,
     });
 
+    // Generate OTP if requested
+    if (generateOTP) {
+      const { otp, hashedOTP } = await generateOTP();
+      newUser.otp = hashedOTP; // Set OTP on the user model
+      newUser.otpExpiry = new Date(Date.now() + 15 * 60 * 1000); // Set expiry time
+      res.json({ message: "User added successfully", otp }); // Send OTP to frontend
+    }
+
+    // Save user with OTP and expiry if generated
     await newUser.save();
 
+    logger.info(`User created: ${username}`);
     res.status(201).json({ message: "User added successfully" });
   } catch (error) {
-    console.error("Error in addNewUser:", error);
+    logger.error(`Error adding new user ${username}: ${error.message}`);
     res.status(500).json({ message: "Server error" });
   }
 };
@@ -161,15 +203,21 @@ exports.blockUserAccount = async (req, res) => {
   }
 };
 
-// Delete User Account
+// Delete User Account i don't know if it will work now
 exports.deleteUserAccount = async (req, res) => {
   const userId = req.params.id;
 
   try {
-    await User.findByIdAndDelete(userId);
+    const user = await User.findByIdAndDelete(userId);
+    if (!user) {
+      logger.error(`Failed to delete user: User not found`);
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    logger.info(`User deleted: ${user.username}`);
     res.json({ message: "User account deleted" });
   } catch (error) {
-    console.error("Error in deleteUserAccount:", error);
+    logger.error(`Error deleting user ${userId}: ${error.message}`);
     res.status(500).json({ message: "Server error" });
   }
 };
@@ -244,5 +292,68 @@ exports.setSafetySettings = async (req, res) => {
   } catch (error) {
     console.error("Error in setSafetySettings:", error);
     res.status(500).json({ message: "Server error" });
+  }
+};
+
+exports.grantPermission = async (req, res) => {
+  const { userId, permission } = req.body;
+
+  try {
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    user.permissions.push(permission);
+    await user.save();
+
+    logger.info(`Permission granted to ${user.username}: ${permission}`);
+    res.json({ message: "Permission granted" });
+  } catch (error) {
+    logger.error(`Error granting permission to ${userId}: ${error.message}`);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+exports.revokePermission = async (req, res) => {
+  const { userId, permission } = req.body;
+
+  try {
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    user.permissions = user.permissions.filter((perm) => perm !== permission);
+    await user.save();
+
+    logger.info(`Permission revoked from ${user.username}: ${permission}`);
+    res.json({ message: "Permission revoked" });
+  } catch (error) {
+    logger.error(`Error revoking permission from ${userId}: ${error.message}`);
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+exports.generateOneTimePassword = async (req, res) => {
+  const username = req.body.username || "knownExistingUsername"; // Use a known username for testing
+
+  try {
+    const user = await User.findOne({ username });
+    if (!user) {
+      console.log("User not found for OTP generation");
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    const { otp, hashedOTP } = await generateOTP();
+    console.log("Generated OTP:", otp); // Log generated OTP (for testing)
+    user.otp = hashedOTP;
+    user.otpExpiry = new Date(Date.now() + 15 * 60 * 1000); // Set expiry time
+    await user.save();
+
+    res.json({ message: "OTP generated successfully", otp });
+  } catch (error) {
+    console.error("Error generating OTP:", error);
+    res.status(500).json({ message: "Server error while generating OTP" });
   }
 };

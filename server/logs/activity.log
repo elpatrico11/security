@@ -1,0 +1,348 @@
+2024-11-02 16:08:23 - info: User created: WIKTOR
+2024-11-02 16:09:28 - info: User created: MICHAL
+2024-11-02 16:09:33 - info: User deleted: jan
+2024-11-02 16:13:13 - info: User created: BAKLAWA
+2024-11-02 16:13:17 - info: User deleted: MICHAL
+2024-11-02 16:13:21 - info: User deleted: WIKTOR
+2024-11-02 16:16:36 - info: User created: RYZ
+2024-11-02 16:23:08 - info: Login attempt for username: ADMIN
+2024-11-02 16:23:09 - info: User ADMIN logged in successfully
+2024-11-02 16:23:13 - info: User created: NIGA
+2024-11-02 16:23:20 - info: Login attempt for username: NIGA
+2024-11-02 16:23:20 - info: User NIGA logged in successfully
+2024-11-02 16:23:52 - info: Login attempt for username: ADMIN
+2024-11-02 16:23:52 - info: User ADMIN logged in successfully
+2024-11-02 16:24:17 - info: Login attempt for username: NIGA
+2024-11-02 16:24:17 - error: Login failed for NIGA: Incorrect password
+2024-11-02 16:27:11 - info: Login attempt for username: ADMIN
+2024-11-02 16:27:11 - error: Login failed for ADMIN: Incorrect password
+2024-11-02 16:28:22 - info: Login attempt for username: ADMIN
+2024-11-02 16:28:22 - info: User ADMIN logged in successfully
+2024-11-02 16:28:36 - info: Admin password changed for ADMIN
+2024-11-02 16:28:47 - info: Login attempt for username: ADMIN
+2024-11-02 16:28:47 - error: Login failed for ADMIN: Incorrect password
+2024-11-02 16:28:50 - info: Login attempt for username: ADMIN
+2024-11-02 16:28:50 - error: Login failed for ADMIN: Incorrect password
+2024-11-02 16:28:51 - info: Login attempt for username: ADMIN
+2024-11-02 16:28:51 - error: Login failed for ADMIN: Incorrect password
+2024-11-02 16:28:52 - info: Login attempt for username: ADMIN
+2024-11-02 16:28:52 - error: Login failed for ADMIN: Incorrect password
+2024-11-02 16:28:55 - info: Login attempt for username: ADMIN
+2024-11-02 16:28:55 - error: Login failed for ADMIN: Incorrect password
+2024-11-02 16:28:56 - info: Login attempt for username: ADMIN
+2024-11-02 16:28:56 - error: Login failed for ADMIN: Incorrect password
+2024-11-02 16:29:10 - info: Login attempt for username: ADMIN
+2024-11-02 16:29:10 - error: Login failed for ADMIN: Incorrect password
+2024-11-02 16:29:11 - info: Login attempt for username: ADMIN
+2024-11-02 16:29:11 - error: Login failed for ADMIN: Incorrect password
+2024-11-02 16:29:13 - info: Login attempt for username: ADMIN
+2024-11-02 16:29:13 - error: Login failed for ADMIN: Incorrect password
+2024-11-02 16:29:14 - info: Login attempt for username: ADMIN
+2024-11-02 16:29:14 - error: Login failed for ADMIN: Incorrect password
+2024-11-02 16:29:14 - info: Login attempt for username: ADMIN
+2024-11-02 16:29:14 - error: Login failed for ADMIN: Incorrect password
+2024-11-02 16:29:20 - info: Login attempt for username: ADMIN
+2024-11-02 16:29:20 - error: Login failed for ADMIN: Incorrect password
+2024-11-02 16:31:13 - info: Login attempt for username: ADMIN
+2024-11-02 16:31:13 - error: Login failed for ADMIN: User not found
+2024-11-02 16:33:11 - info: Login attempt for username: ADMIN
+2024-11-02 16:33:11 - info: User ADMIN logged in successfully
+2024-11-02 16:33:30 - info: User created: mis
+2024-11-02 16:33:43 - info: Login attempt for username: mis
+2024-11-02 16:33:43 - info: User mis logged in successfully
+2024-11-02 16:34:06 - info: Login attempt for username: mis
+2024-11-02 16:34:06 - info: User mis logged in successfully
+2024-11-02 16:38:40 - info: Login attempt for username: ADMIN
+2024-11-02 16:38:41 - info: User ADMIN logged in successfully
+2024-11-02 16:38:46 - info: User created: RUFIK
+2024-11-02 16:38:53 - info: Login attempt for username: RUFIK
+2024-11-02 16:38:53 - info: User RUFIK logged in successfully
+2024-11-02 16:39:02 - info: Password changed successfully for user RUFIK
+2024-11-02 16:39:06 - info: Password changed successfully for user RUFIK
+2024-11-02 16:51:51 - info: Login attempt for username: ADMIN
+2024-11-02 16:51:51 - info: User ADMIN logged in successfully
+2024-11-02 16:59:40 - info: Login attempt for username: ADMIN
+2024-11-02 16:59:41 - info: User ADMIN logged in successfully
+2024-11-02 17:00:08 - info: User created: cook
+2024-11-02 17:00:15 - info: Login attempt for username: cook
+2024-11-02 17:00:15 - info: User cook logged in successfully
+2024-11-02 17:00:23 - info: Login attempt for username: ADMIN
+2024-11-02 17:00:23 - info: User ADMIN logged in successfully
+2024-11-02 17:03:17 - info: Login attempt for username: ADMIN
+2024-11-02 17:03:17 - info: User ADMIN logged in successfully
+2024-11-02 17:07:40 - info: User created: rucki
+2024-11-02 17:07:54 - info: Login attempt for username: rucki
+2024-11-02 17:07:54 - info: User rucki logged in successfully
+2024-11-02 17:07:59 - info: Password changed successfully for user rucki
+2024-11-02 17:08:04 - info: Password changed successfully for user rucki
+2024-11-02 17:08:12 - info: Login attempt for username: ADMIN
+2024-11-02 17:08:12 - info: User ADMIN logged in successfully
+2024-11-02 17:13:01 - info: User created: pink
+2024-11-02 17:14:26 - info: User deleted: cook
+2024-11-02 17:19:37 - info: Login attempt for username: ADMIN
+2024-11-02 17:19:37 - info: User ADMIN logged in successfully
+2024-11-02 17:20:16 - info: User created: MAN
+2024-11-02 17:20:29 - info: Login attempt for username: MAN
+2024-11-02 17:20:30 - error: Login failed for MAN: Incorrect password
+2024-11-02 17:20:34 - info: Login attempt for username: man
+2024-11-02 17:20:34 - error: Login failed for man: User not found
+2024-11-02 17:20:36 - info: Login attempt for username: man
+2024-11-02 17:20:36 - error: Login failed for man: User not found
+2024-11-02 17:20:36 - info: Login attempt for username: man
+2024-11-02 17:20:36 - error: Login failed for man: User not found
+2024-11-02 17:20:38 - info: Login attempt for username: MAN
+2024-11-02 17:20:38 - error: Login failed for MAN: Incorrect password
+2024-11-02 17:20:43 - info: Login attempt for username: ADMIN
+2024-11-02 17:20:43 - info: User ADMIN logged in successfully
+2024-11-02 17:21:07 - info: Login attempt for username: MAN
+2024-11-02 17:21:07 - error: Login failed for MAN: Incorrect password
+2024-11-02 17:21:08 - info: Login attempt for username: man
+2024-11-02 17:21:08 - error: Login failed for man: User not found
+2024-11-02 17:21:10 - info: Login attempt for username: man
+2024-11-02 17:21:10 - error: Login failed for man: User not found
+2024-11-02 17:21:10 - info: Login attempt for username: man
+2024-11-02 17:21:10 - error: Login failed for man: User not found
+2024-11-02 17:21:22 - info: Login attempt for username: ADMIN
+2024-11-02 17:21:23 - info: User ADMIN logged in successfully
+2024-11-02 17:21:39 - info: User created: timba
+2024-11-02 17:21:57 - info: Login attempt for username: timba
+2024-11-02 17:21:57 - info: User timba logged in successfully
+2024-11-02 17:22:06 - info: Login attempt for username: ADMIN
+2024-11-02 17:22:06 - info: User ADMIN logged in successfully
+2024-11-02 17:23:44 - info: User deleted: MAN
+2024-11-02 17:24:03 - info: User created: kik
+2024-11-02 17:24:15 - info: User deleted: kik
+2024-11-02 17:25:00 - info: User created: mix
+2024-11-02 17:25:10 - info: User deleted: mix
+2024-11-02 17:25:56 - info: User created: max
+2024-11-02 17:26:06 - info: User deleted: max
+2024-11-02 17:26:27 - info: User created: micha
+2024-11-02 17:26:33 - info: User deleted: micha
+2024-11-02 17:27:10 - info: User created: men
+2024-11-02 17:27:18 - info: User deleted: men
+2024-11-02 17:28:57 - info: User created: ok
+2024-11-02 17:31:02 - info: User deleted: timba
+2024-11-02 17:37:48 - info: Login attempt for username: ADMIN
+2024-11-02 17:37:48 - info: User ADMIN logged in successfully
+2024-11-02 17:38:14 - info: User created: MANKO
+2024-11-02 17:38:24 - info: Login attempt for username: MANKO
+2024-11-02 17:38:24 - info: User MANKO logged in successfully
+2024-11-02 17:38:36 - info: Login attempt for username: ADMIN
+2024-11-02 17:38:36 - info: User ADMIN logged in successfully
+2024-11-02 17:41:55 - info: User deleted: mis
+2024-11-02 17:42:59 - info: User created: ka
+2024-11-02 17:43:09 - info: Login attempt for username: ka
+2024-11-02 17:43:09 - info: User ka logged in successfully
+2024-11-02 17:43:15 - info: Login attempt for username: ADMIN
+2024-11-02 17:43:15 - info: User ADMIN logged in successfully
+2024-11-02 17:47:11 - info: User created: kan
+2024-11-02 17:47:32 - info: Login attempt for username: kan
+2024-11-02 17:47:32 - info: User kan logged in successfully
+2024-11-02 17:48:00 - info: Login attempt for username: ADMIN
+2024-11-02 17:48:00 - info: User ADMIN logged in successfully
+2024-11-02 18:00:47 - info: User created: wiktor
+2024-11-02 18:01:11 - info: User created: ruk
+2024-11-02 18:03:35 - info: User created: run
+2024-11-02 18:13:11 - info: Login attempt for username: kix
+2024-11-02 18:13:11 - error: Login failed for kix: User not found
+2024-11-02 18:13:13 - info: Login attempt for username: kix
+2024-11-02 18:13:13 - error: Login failed for kix: User not found
+2024-11-02 18:13:15 - info: Login attempt for username: kix
+2024-11-02 18:13:15 - error: Login failed for kix: User not found
+2024-11-02 18:13:16 - info: Login attempt for username: kix
+2024-11-02 18:13:16 - error: Login failed for kix: User not found
+2024-11-02 18:13:16 - info: Login attempt for username: kix
+2024-11-02 18:13:16 - error: Login failed for kix: User not found
+2024-11-02 18:18:02 - info: Login attempt for username: ADMIN
+2024-11-02 18:18:02 - info: User ADMIN logged in successfully
+2024-11-02 18:18:05 - info: User deleted: run
+2024-11-02 18:18:08 - info: User deleted: RUFIK
+2024-11-02 18:18:18 - info: User deleted: rucki
+2024-11-02 18:18:20 - info: User deleted: pink
+2024-11-02 18:18:24 - info: User deleted: ka
+2024-11-02 18:18:30 - info: User created: BAK
+2024-11-02 18:18:37 - info: Login attempt for username: BAK
+2024-11-02 18:21:13 - info: Login attempt for username: ADMIN
+2024-11-02 18:21:13 - info: User ADMIN logged in successfully
+2024-11-02 18:21:27 - info: User created: LOLI
+2024-11-02 18:21:40 - info: Login attempt for username: LOLI
+2024-11-02 18:21:49 - info: Login attempt for username: ADMIN
+2024-11-02 18:21:49 - info: User ADMIN logged in successfully
+2024-11-02 18:22:01 - info: User created: MAX
+2024-11-02 18:22:08 - info: Login attempt for username: MAX
+2024-11-02 18:26:23 - info: Login attempt for username: ADMIN
+2024-11-02 18:26:23 - info: User ADMIN logged in successfully
+2024-11-02 18:26:30 - info: User created: KIS
+2024-11-02 18:26:37 - info: Login attempt for username: KIS
+2024-11-02 18:26:37 - info: User KIS logged in successfully
+2024-11-02 18:26:45 - info: Login attempt for username: ADMIN
+2024-11-02 18:26:45 - info: User ADMIN logged in successfully
+2024-11-02 18:27:05 - info: Login attempt for username: KIS
+2024-11-02 18:27:05 - info: User KIS logged in successfully
+2024-11-02 18:27:16 - info: Login attempt for username: ADMIN
+2024-11-02 18:27:16 - info: User ADMIN logged in successfully
+2024-11-02 18:27:36 - info: Login attempt for username: KIS
+2024-11-02 18:27:36 - info: User KIS logged in successfully
+2024-11-02 18:27:44 - info: Login attempt for username: ADMIN
+2024-11-02 18:27:44 - info: User ADMIN logged in successfully
+2024-11-02 18:28:27 - info: User created: rysiek
+2024-11-02 18:28:40 - info: User created: ma
+2024-11-02 18:28:52 - info: Login attempt for username: ma
+2024-11-02 18:28:52 - info: User ma logged in successfully
+2024-11-02 18:31:49 - info: Login attempt for username: ADMIN
+2024-11-02 18:31:49 - info: User ADMIN logged in successfully
+2024-11-02 18:31:56 - info: User created: RYDZ
+2024-11-02 18:32:06 - info: Login attempt for username: RYDZ
+2024-11-02 18:32:06 - info: User RYDZ logged in successfully
+2024-11-02 18:32:14 - info: Login attempt for username: ADMIN
+2024-11-02 18:32:14 - info: User ADMIN logged in successfully
+2024-11-02 18:32:22 - info: User created: MU
+2024-11-02 18:32:32 - info: Login attempt for username: MU
+2024-11-02 18:32:32 - info: User MU logged in successfully
+2024-11-02 18:32:39 - info: Login attempt for username: ADMIN
+2024-11-02 18:32:39 - info: User ADMIN logged in successfully
+2024-11-02 18:32:47 - info: User created: ROK
+2024-11-02 18:33:07 - info: Login attempt for username: ROK
+2024-11-02 18:33:07 - info: User ROK logged in successfully
+2024-11-02 18:35:05 - info: Login attempt for username: ADMIN
+2024-11-02 18:35:05 - info: User ADMIN logged in successfully
+2024-11-02 18:35:10 - info: User deleted: ok
+2024-11-02 18:35:13 - info: User deleted: MANKO
+2024-11-02 18:35:18 - info: User created: M
+2024-11-02 18:35:34 - info: Login attempt for username: M
+2024-11-02 18:35:34 - info: User M logged in successfully
+2024-11-02 18:35:38 - info: Password changed successfully for user M
+2024-11-02 18:35:41 - info: Login attempt for username: M
+2024-11-02 18:35:41 - info: User M logged in successfully
+2024-11-02 18:40:04 - info: Login attempt for username: M
+2024-11-02 18:40:04 - info: User M logged in successfully
+2024-11-02 18:41:29 - info: Login attempt for username: ADMIN
+2024-11-02 18:41:29 - info: User ADMIN logged in successfully
+2024-11-02 18:41:36 - info: User created: MIX
+2024-11-02 18:41:48 - info: Login attempt for username: MIX
+2024-11-02 18:41:48 - info: User MIX logged in successfully
+2024-11-02 18:45:30 - info: Login attempt for username: ADMIN
+2024-11-02 18:45:30 - info: User ADMIN logged in successfully
+2024-11-02 18:45:38 - info: User created: REX
+2024-11-02 18:45:45 - info: Login attempt for username: REX
+2024-11-02 18:45:45 - info: User REX logged in successfully
+2024-11-02 18:48:13 - info: Login attempt for username: ADMIN
+2024-11-02 18:48:13 - info: User ADMIN logged in successfully
+2024-11-02 18:48:21 - info: User created: LOL
+2024-11-02 18:48:33 - info: Login attempt for username: LOL
+2024-11-02 18:48:33 - info: User LOL logged in successfully
+2024-11-02 18:48:53 - info: Login attempt for username: LOL
+2024-11-02 18:48:53 - info: User LOL logged in successfully
+2024-11-02 18:53:43 - info: Login attempt for username: ADMIN
+2024-11-02 18:53:43 - info: User ADMIN logged in successfully
+2024-11-02 18:53:58 - info: User created: HAM
+2024-11-02 18:54:03 - info: Login attempt for username: HAM
+2024-11-02 18:54:03 - info: User HAM logged in successfully
+2024-11-02 18:54:08 - info: Login attempt for username: ADMIN
+2024-11-02 18:54:08 - info: User ADMIN logged in successfully
+2024-11-02 19:00:18 - info: Login attempt for username: ADMIN
+2024-11-02 19:00:18 - info: User ADMIN logged in successfully
+2024-11-02 19:02:33 - info: Login attempt for username: REX
+2024-11-02 19:02:38 - info: User REX verified OTP and logged in successfully
+2024-11-02 19:02:46 - info: Login attempt for username: ADMIN
+2024-11-02 19:02:46 - info: User ADMIN logged in successfully
+2024-11-02 19:08:52 - info: User created: ki
+2024-11-02 19:09:07 - info: Login attempt for username: ki
+2024-11-02 19:09:10 - info: User ki verified OTP and logged in successfully
+2024-11-02 19:10:22 - info: Login attempt for username: ADMIN
+2024-11-02 19:10:22 - info: User ADMIN logged in successfully
+2024-11-02 19:10:26 - info: User deleted: kan
+2024-11-02 19:10:29 - info: User deleted: wiktor
+2024-11-02 19:10:32 - info: User deleted: ruk
+2024-11-02 19:10:36 - info: User deleted: BAK
+2024-11-02 19:10:38 - info: User deleted: LOLI
+2024-11-02 19:10:42 - info: User deleted: rysiek
+2024-11-02 19:10:44 - info: User deleted: MAX
+2024-11-02 19:10:47 - info: User deleted: KIS
+2024-11-02 19:10:50 - info: User deleted: ma
+2024-11-02 19:10:53 - info: User deleted: RYDZ
+2024-11-02 19:10:56 - info: User deleted: MU
+2024-11-02 19:10:59 - info: User deleted: ki
+2024-11-02 19:11:02 - info: User deleted: ROK
+2024-11-02 19:11:05 - info: User deleted: LOL
+2024-11-02 19:11:07 - info: User deleted: M
+2024-11-02 19:11:10 - info: User deleted: MIX
+2024-11-02 19:11:13 - info: User deleted: REX
+2024-11-02 19:11:18 - info: User created: jo
+2024-11-02 19:11:26 - info: Login attempt for username: jo
+2024-11-02 19:11:26 - info: User jo logged in successfully
+2024-11-02 19:11:31 - info: Login attempt for username: ADMIN
+2024-11-02 19:11:31 - info: User ADMIN logged in successfully
+2024-11-02 19:14:48 - info: User deleted: jo
+2024-11-02 19:14:51 - info: User deleted: HAM
+2024-11-02 19:14:57 - info: User created: mi
+2024-11-04 12:15:27 - info: Login attempt for username: ADMIN
+2024-11-04 12:15:27 - info: User ADMIN logged in successfully
+2024-11-04 12:15:33 - info: User created: MIX
+2024-11-04 12:15:38 - info: Login attempt for username: MIX
+2024-11-04 12:15:38 - info: User MIX logged in successfully
+2024-11-04 12:15:48 - info: Login attempt for username: ADMIN
+2024-11-04 12:15:48 - info: User ADMIN logged in successfully
+2024-11-04 12:16:44 - info: User created: ROS
+2024-11-04 12:16:48 - info: Login attempt for username: ROS
+2024-11-04 12:16:48 - info: User ROS logged in successfully
+2024-11-04 12:18:30 - info: Login attempt for username: ADMIN
+2024-11-04 12:18:30 - info: User ADMIN logged in successfully
+2024-11-04 12:18:35 - info: User deleted: ROS
+2024-11-04 12:33:40 - info: User created: ruc
+2024-11-04 12:33:46 - info: Login attempt for username: ruc
+2024-11-04 12:33:46 - info: User ruc logged in successfully
+2024-11-04 12:33:54 - info: Login attempt for username: ruc
+2024-11-04 12:33:54 - info: User ruc logged in successfully
+2024-11-04 12:34:07 - info: Login attempt for username: ruc
+2024-11-04 12:34:07 - info: User ruc logged in successfully
+2024-11-04 12:35:27 - info: Login attempt for username: ruc
+2024-11-04 12:35:27 - info: User ruc logged in successfully
+2024-11-04 12:35:34 - info: Login attempt for username: ADMIN
+2024-11-04 12:35:34 - info: User ADMIN logged in successfully
+2024-11-04 12:35:42 - info: User created: MIC
+2024-11-04 12:36:10 - info: User created: MU
+2024-11-04 12:36:14 - info: Login attempt for username: MU
+2024-11-04 12:36:14 - info: User MU logged in successfully
+2024-11-04 12:36:30 - info: Login attempt for username: mu
+2024-11-04 12:36:30 - error: Login failed for mu: User not found
+2024-11-04 12:36:36 - info: Login attempt for username: ADMIN
+2024-11-04 12:36:36 - info: User ADMIN logged in successfully
+2024-11-04 12:36:39 - info: User created: TO
+2024-11-04 12:36:42 - info: Login attempt for username: TO
+2024-11-04 12:36:42 - info: User TO logged in successfully
+2024-11-04 12:36:45 - info: Login attempt for username: TO
+2024-11-04 12:36:45 - info: User TO logged in successfully
+2024-11-04 12:36:52 - info: Login attempt for username: ADMIN
+2024-11-04 12:36:52 - info: User ADMIN logged in successfully
+2024-11-04 12:41:03 - info: User created: bing
+2024-11-04 12:41:19 - info: User deleted: mi
+2024-11-04 12:41:21 - info: User deleted: MIX
+2024-11-04 12:41:23 - info: User deleted: ruc
+2024-11-04 12:41:24 - info: User deleted: MIC
+2024-11-04 12:41:26 - info: User deleted: MU
+2024-11-04 12:41:28 - info: User deleted: TO
+2024-11-04 12:41:36 - info: User deleted: bing
+2024-11-04 12:41:44 - info: User created: lo
+2024-11-04 12:41:51 - info: Login attempt for username: lo
+2024-11-04 12:41:53 - info: User lo verified OTP and logged in successfully
+2024-11-04 12:42:11 - info: Login attempt for username: ADMIN
+2024-11-04 12:42:11 - info: User ADMIN logged in successfully
+2024-11-04 12:42:16 - info: User created: MI
+2024-11-04 12:47:12 - info: User created: ki
+2024-11-04 12:47:23 - info: Login attempt for username: ki
+2024-11-04 12:47:25 - info: User ki verified OTP and logged in successfully
+2024-11-04 12:47:32 - info: Login attempt for username: ADMIN
+2024-11-04 12:47:32 - info: User ADMIN logged in successfully
+2024-11-04 12:47:37 - info: User created: LOL
+2024-11-04 12:47:43 - info: Login attempt for username: LOL
+2024-11-04 12:47:44 - info: User LOL verified OTP and logged in successfully
+2024-11-04 12:47:50 - info: Login attempt for username: ADMIN
+2024-11-04 12:47:50 - info: User ADMIN logged in successfully
+2024-11-04 12:49:36 - info: Login attempt for username: ADMIN
+2024-11-04 12:49:36 - info: User ADMIN logged in successfully
+2024-11-04 12:49:42 - info: User created: BING
+2024-11-04 12:49:50 - info: Login attempt for username: BING
+2024-11-04 12:49:52 - info: User BING verified OTP and logged in successfully
+2024-11-04 12:50:04 - info: Login attempt for username: ADMIN
+2024-11-04 12:50:05 - info: User ADMIN logged in successfully

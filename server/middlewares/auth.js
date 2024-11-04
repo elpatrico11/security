@@ -16,8 +16,10 @@ exports.protect = (req, res, next) => {
   }
 
   try {
+    // Decode the token to get user data, including username, id, and role
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decoded;
+    req.user = decoded; // Attach decoded token data to req.user
+
     next();
   } catch (error) {
     res.status(403).json({ message: "Token is invalid" });

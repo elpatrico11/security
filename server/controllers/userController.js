@@ -1,5 +1,6 @@
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
+const logger = require("../logger");
 
 exports.changeUserPassword = async (req, res) => {
   const { oldPassword, newPassword } = req.body;
@@ -8,11 +9,15 @@ exports.changeUserPassword = async (req, res) => {
   try {
     const user = await User.findById(userId);
     if (!user) {
+      logger.error(`Password change failed: User ${userId} not found`);
       return res.status(404).json({ message: "User not found" });
     }
 
     const isMatch = await user.matchPassword(oldPassword);
     if (!isMatch) {
+      logger.error(
+        `Password change failed for ${user.username}: Incorrect old password`
+      );
       return res.status(400).json({ message: "Old password is incorrect" });
     }
 
@@ -35,6 +40,12 @@ exports.changeUserPassword = async (req, res) => {
     }
 
     if (!passwordValid) {
+      logger.error(
+        `Password change failed for ${user.username}: ${errorMessage.slice(
+          0,
+          -1
+        )}`
+      );
       return res.status(400).json({
         message: errorMessage.slice(0, -1), // Remove trailing comma
       });
@@ -45,24 +56,24 @@ exports.changeUserPassword = async (req, res) => {
     user.isFirstLogin = false; // Set first login to false after password change
     await user.save();
 
+    // Log successful password change
+    logger.info(`Password changed successfully for user ${user.username}`);
     res.json({ message: "Password changed successfully" });
   } catch (error) {
-    console.error("Error in changeUserPassword:", error);
+    logger.error(`Error in changeUserPassword for ${userId}: ${error.message}`);
     res.status(500).json({ message: "Server error" });
   }
 };
 
 exports.getUserById = async (req, res) => {
-  const { id } = req.params; // Get the user ID from the request parameters
+  const { id } = req.params;
 
   try {
     const user = await User.findById(id);
     if (!user) {
-      console.error("User not found");
       return res.status(404).json({ message: "User not found" });
     }
 
-    // If you want to send only specific fields, you can do so here
     res.json({
       id: user._id,
       username: user.username,
@@ -70,7 +81,6 @@ exports.getUserById = async (req, res) => {
       // Add other fields as necessary
     });
   } catch (error) {
-    console.error("Error fetching user:", error);
     res.status(500).json({ message: "Server error" });
   }
 };
@@ -81,16 +91,15 @@ exports.getUserStatus = async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
+
     res.json({
       isFirstLogin: user.isFirstLogin,
-      // You can add other user status information here if needed
       username: user.username,
       requireUpperCase: user.requireUpperCase,
       requireLowerCase: user.requireLowerCase,
       requireSpecialChar: user.requireSpecialChar,
     });
   } catch (error) {
-    console.error("Error in getUserStatus:", error);
     res.status(500).json({ message: "Server error" });
   }
 };
