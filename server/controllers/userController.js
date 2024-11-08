@@ -53,7 +53,7 @@ exports.changeUserPassword = async (req, res) => {
 
     const salt = await bcrypt.genSalt(10);
     user.password = await bcrypt.hash(newPassword, salt);
-    user.isFirstLogin = false; // Set first login to false after password change
+    user.isFirstLogin = false; // Set `isFirstLogin` to false after first password change
     await user.save();
 
     // Log successful password change
@@ -94,6 +94,7 @@ exports.getUserStatus = async (req, res) => {
 
     res.json({
       isFirstLogin: user.isFirstLogin,
+      hasChangedPassword: !user.isFirstLogin, // `true` if the user has changed the password
       username: user.username,
       requireUpperCase: user.requireUpperCase,
       requireLowerCase: user.requireLowerCase,

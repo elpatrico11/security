@@ -1,5 +1,6 @@
 const express = require("express");
 const { protect } = require("../middlewares/auth");
+const sessionTimeout = require("../middlewares/sessionTimeout");
 const {
   changeUserPassword,
   getUserById,
@@ -7,10 +8,10 @@ const {
 } = require("../controllers/userController");
 const router = express.Router();
 
-router.get("/status", protect, getUserStatus);
+const SESSION_TIMEOUT_DURATION = 1 * 60 * 1000; // 1 minute timeout
 
-router.post("/change-password", protect, changeUserPassword);
-
-router.get("/:id", protect, getUserById);
+router.get("/status", protect, sessionTimeout, getUserStatus);
+router.post("/change-password", protect, sessionTimeout, changeUserPassword);
+router.get("/:id", protect, sessionTimeout, getUserById);
 
 module.exports = router;

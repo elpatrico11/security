@@ -346,3 +346,91 @@
 2024-11-04 12:49:52 - info: User BING verified OTP and logged in successfully
 2024-11-04 12:50:04 - info: Login attempt for username: ADMIN
 2024-11-04 12:50:05 - info: User ADMIN logged in successfully
+2024-11-08 13:09:54 - info: Login attempt for username: ADMIN
+2024-11-08 13:09:55 - info: User ADMIN logged in successfully
+2024-11-08 13:10:11 - info: User deleted: BING
+2024-11-08 13:19:04 - info: User created: puk
+2024-11-08 13:19:10 - info: Login attempt for username: puk
+2024-11-08 13:19:10 - info: User puk logged in successfully
+2024-11-08 13:19:14 - error: Password change failed for puk: Incorrect old password
+2024-11-08 13:19:16 - error: Password change failed for puk: Incorrect old password
+2024-11-08 13:21:13 - info: Login attempt for username: puk
+2024-11-08 13:21:13 - info: User puk logged in successfully
+2024-11-08 13:21:15 - error: Password change failed for puk: Incorrect old password
+2024-11-08 13:21:29 - info: Login attempt for username: puk
+2024-11-08 13:21:29 - info: User puk logged in successfully
+2024-11-08 13:24:07 - info: Login attempt for username: puk
+2024-11-08 13:24:07 - info: User puk logged in successfully
+2024-11-08 13:24:12 - info: Password changed successfully for user puk
+2024-11-08 13:25:17 - info: Login attempt for username: puk
+2024-11-08 13:25:17 - error: Login failed for puk: Incorrect password
+2024-11-08 13:25:19 - info: Login attempt for username: puk
+2024-11-08 13:25:19 - info: User puk logged in successfully
+2024-11-08 13:25:33 - info: Login attempt for username: ADMIN
+2024-11-08 13:25:33 - error: Login failed for ADMIN: Incorrect password
+2024-11-08 13:25:36 - info: Login attempt for username: ADMIN
+2024-11-08 13:25:36 - info: User ADMIN logged in successfully
+2024-11-08 13:25:43 - info: User created: KOK
+2024-11-08 13:25:47 - info: Login attempt for username: KOK
+2024-11-08 13:25:47 - info: User KOK logged in successfully
+2024-11-08 13:25:51 - info: Password changed successfully for user KOK
+2024-11-08 13:25:58 - info: Login attempt for username: KOK
+2024-11-08 13:25:58 - info: User KOK logged in successfully
+2024-11-08 13:28:11 - info: Login attempt for username: ADMIN
+2024-11-08 13:28:11 - info: User ADMIN logged in successfully
+2024-11-08 13:28:16 - info: User created: rik
+2024-11-08 13:28:20 - info: Login attempt for username: rik
+2024-11-08 13:28:21 - info: User rik logged in successfully
+2024-11-08 13:28:24 - info: Password changed successfully for user rik
+2024-11-08 13:28:27 - info: Login attempt for username: rik
+2024-11-08 13:28:28 - info: User rik logged in successfully
+2024-11-08 13:30:18 - info: Login attempt for username: ADMIN
+2024-11-08 13:30:18 - info: User ADMIN logged in successfully
+2024-11-08 13:30:21 - info: User created: JO
+2024-11-08 13:30:24 - info: Login attempt for username: JO
+2024-11-08 13:30:24 - info: User JO logged in successfully
+2024-11-08 13:30:27 - info: Password changed successfully for user JO
+2024-11-08 13:30:30 - info: Login attempt for username: JO
+2024-11-08 13:30:30 - info: User JO logged in successfully
+2024-11-08 13:34:53 - info: Login attempt for username: ADMIN
+2024-11-08 13:34:53 - info: User ADMIN logged in successfully
+2024-11-08 13:34:56 - info: User created: B
+2024-11-08 13:35:00 - info: Login attempt for username: B
+2024-11-08 13:35:00 - info: User B logged in successfully
+2024-11-08 13:35:03 - info: Password changed successfully for user B
+2024-11-08 13:35:07 - info: Login attempt for username: B
+2024-11-08 13:35:07 - info: User B logged in successfully
+2024-11-08 13:38:22 - info: Login attempt for username: B
+2024-11-08 13:38:22 - info: User B logged in successfully
+2024-11-08 13:45:42 - info: Login attempt for username: ADMIN
+2024-11-08 13:45:42 - info: User ADMIN logged in successfully
+2024-11-08 13:45:47 - info: User created: IN
+2024-11-08 13:45:51 - info: Login attempt for username: IN
+2024-11-08 13:45:51 - info: User IN logged in successfully
+2024-11-08 13:45:56 - info: Password changed successfully for user IN
+2024-11-08 13:46:05 - info: Login attempt for username: IN
+2024-11-08 13:46:05 - info: User IN logged in successfully
+2024-11-08 13:48:56 - info: Login attempt for username: ADMIN
+2024-11-08 13:48:56 - info: User ADMIN logged in successfully
+2024-11-08 13:48:59 - info: User created: U
+2024-11-08 13:49:03 - info: Login attempt for username: U
+2024-11-08 13:49:03 - info: User U logged in successfully
+2024-11-08 13:49:06 - info: Password changed successfully for user U
+2024-11-08 13:54:20 - info: Login attempt for username: ADMIN
+2024-11-08 13:54:20 - info: User ADMIN logged in successfully
+2024-11-08 13:54:23 - info: User created: ME
+2024-11-08 13:54:27 - info: Login attempt for username: ME
+2024-11-08 13:54:27 - info: User ME logged in successfully
+2024-11-08 13:54:30 - info: Password changed successfully for user ME
+2024-11-08 14:00:18 - info: Login attempt for username: ADMIN
+2024-11-08 14:00:19 - info: User ADMIN logged in successfully
+2024-11-08 14:00:23 - info: User created: TY
+2024-11-08 14:00:34 - info: Login attempt for username: TY
+2024-11-08 14:00:34 - info: User TY logged in successfully
+2024-11-08 14:00:38 - info: Password changed successfully for user TY
+2024-11-08 14:03:56 - info: Login attempt for username: ADMIN
+2024-11-08 14:03:56 - info: User ADMIN logged in successfully
+2024-11-08 14:03:59 - info: User created: X
+2024-11-08 14:04:05 - info: Login attempt for username: X
+2024-11-08 14:04:06 - info: User X logged in successfully
+2024-11-08 14:04:09 - info: Password changed successfully for user X

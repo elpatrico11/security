@@ -6,24 +6,23 @@ const sessionTimeout = async (req, res, next) => {
 
   try {
     const user = await User.findById(userId);
-
-    // If user not found, continue without timeout checks
     if (!user) return next();
 
-    // Use user-specific session timeout duration
-    const sessionTimeoutDuration =
-      user.sessionTimeoutDuration || 15 * 60 * 1000; // Default 15 minutes if undefined
+    const sessionTimeoutDuration = user.sessionTimeoutDuration || 1 * 60 * 1000; // 1 minute
 
-    if (
-      req.session.lastActive &&
-      currentTime - req.session.lastActive > sessionTimeoutDuration
-    ) {
+    // Initialize `lastActive` if it doesn't exist
+    if (!req.session.lastActive) {
+      req.session.lastActive = currentTime;
+    }
+
+    if (currentTime - req.session.lastActive > sessionTimeoutDuration) {
+      console.log("Session expired due to inactivity for user:", userId);
       req.session.destroy((err) => {
         if (err) return res.status(500).send("Error ending session");
         return res.status(401).json({ message: "Session timed out" });
       });
     } else {
-      req.session.lastActive = currentTime;
+      req.session.lastActive = currentTime; // Update the last active time
       next();
     }
   } catch (error) {
