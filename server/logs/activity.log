@@ -434,3 +434,375 @@
 2024-11-08 14:04:05 - info: Login attempt for username: X
 2024-11-08 14:04:06 - info: User X logged in successfully
 2024-11-08 14:04:09 - info: Password changed successfully for user X
+2024-11-12 12:10:14 - info: Login attempt for username: ADMIN
+2024-11-12 12:10:14 - info: User ADMIN logged in successfully
+2024-11-12 12:10:25 - info: User created: git
+2024-11-12 12:11:02 - info: Login attempt for username: git
+2024-11-12 12:11:02 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:03 - info: Login attempt for username: git
+2024-11-12 12:11:03 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:05 - info: Login attempt for username: git
+2024-11-12 12:11:05 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:06 - info: Login attempt for username: git
+2024-11-12 12:11:06 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:08 - info: Login attempt for username: git
+2024-11-12 12:11:08 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:10 - info: Login attempt for username: git
+2024-11-12 12:11:10 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:12 - info: Login attempt for username: git
+2024-11-12 12:11:13 - info: User git logged in successfully
+2024-11-12 12:11:18 - info: Password changed successfully for user git
+2024-11-12 12:11:25 - info: Login attempt for username: git
+2024-11-12 12:11:25 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:26 - info: Login attempt for username: git
+2024-11-12 12:11:26 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:28 - info: Login attempt for username: git
+2024-11-12 12:11:28 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:29 - info: Login attempt for username: git
+2024-11-12 12:11:29 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:29 - info: Login attempt for username: git
+2024-11-12 12:11:29 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:30 - info: Login attempt for username: git
+2024-11-12 12:11:30 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:30 - info: Login attempt for username: git
+2024-11-12 12:11:30 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:31 - info: Login attempt for username: git
+2024-11-12 12:11:31 - error: Login failed for git: Incorrect password
+2024-11-12 12:11:35 - info: Login attempt for username: git
+2024-11-12 12:11:35 - info: User git logged in successfully
+2024-11-12 12:13:03 - info: Login attempt for username: git
+2024-11-12 12:13:03 - error: Login failed for git: Incorrect password
+2024-11-12 12:16:01 - info: Login attempt for username: ADMIN
+2024-11-12 12:16:01 - info: User ADMIN logged in successfully
+2024-11-12 12:16:04 - info: User created: dep
+2024-11-12 12:16:10 - info: Login attempt for username: dep
+2024-11-12 12:16:10 - info: User dep logged in successfully
+2024-11-12 12:16:15 - info: Login attempt for username: dep
+2024-11-12 12:16:15 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:28 - info: Login attempt for username: dep
+2024-11-12 12:16:28 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:30 - info: Login attempt for username: dep
+2024-11-12 12:16:30 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:32 - info: Login attempt for username: dep
+2024-11-12 12:16:32 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:33 - info: Login attempt for username: dep
+2024-11-12 12:16:33 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:35 - info: Login attempt for username: dep
+2024-11-12 12:16:35 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:36 - info: Login attempt for username: dep
+2024-11-12 12:16:36 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:37 - info: Login attempt for username: dep
+2024-11-12 12:16:37 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:38 - info: Login attempt for username: dep
+2024-11-12 12:16:39 - info: User dep logged in successfully
+2024-11-12 12:16:47 - info: Login attempt for username: dep
+2024-11-12 12:16:47 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:48 - info: Login attempt for username: dep
+2024-11-12 12:16:48 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:48 - info: Login attempt for username: dep
+2024-11-12 12:16:49 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:49 - info: Login attempt for username: dep
+2024-11-12 12:16:49 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:49 - info: Login attempt for username: dep
+2024-11-12 12:16:49 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:49 - info: Login attempt for username: dep
+2024-11-12 12:16:49 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:49 - info: Login attempt for username: dep
+2024-11-12 12:16:49 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:49 - info: Login attempt for username: dep
+2024-11-12 12:16:49 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:49 - info: Login attempt for username: dep
+2024-11-12 12:16:50 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:50 - info: Login attempt for username: dep
+2024-11-12 12:16:50 - error: Login failed for dep: Incorrect password
+2024-11-12 12:16:50 - info: Login attempt for username: dep
+2024-11-12 12:16:50 - error: Login failed for dep: Incorrect password
+2024-11-12 12:20:57 - info: Login attempt for username: ADMIN
+2024-11-12 12:20:57 - info: User ADMIN logged in successfully
+2024-11-12 12:21:01 - info: User deleted: lo
+2024-11-12 12:21:03 - info: User deleted: MI
+2024-11-12 12:21:06 - info: User deleted: ki
+2024-11-12 12:21:09 - info: User deleted: LOL
+2024-11-12 12:21:12 - info: User deleted: puk
+2024-11-12 12:21:15 - info: User deleted: KOK
+2024-11-12 12:21:17 - info: User deleted: rik
+2024-11-12 12:21:20 - info: User deleted: JO
+2024-11-12 12:21:22 - info: User deleted: B
+2024-11-12 12:21:25 - info: User deleted: IN
+2024-11-12 12:21:28 - info: User deleted: U
+2024-11-12 12:21:30 - info: User deleted: ME
+2024-11-12 12:21:33 - info: User deleted: TY
+2024-11-12 12:21:36 - info: User deleted: X
+2024-11-12 12:21:41 - info: User created: T
+2024-11-12 12:22:25 - info: Login attempt for username: T
+2024-11-12 12:22:25 - info: User T logged in successfully
+2024-11-12 12:22:29 - info: Login attempt for username: T
+2024-11-12 12:22:29 - error: Login failed for T: Incorrect password
+2024-11-12 12:22:29 - info: Login attempt for username: T
+2024-11-12 12:22:29 - error: Login failed for T: Incorrect password
+2024-11-12 12:22:30 - info: Login attempt for username: T
+2024-11-12 12:22:30 - error: Login failed for T: Incorrect password
+2024-11-12 12:22:30 - info: Login attempt for username: T
+2024-11-12 12:22:30 - error: Login failed for T: Incorrect password
+2024-11-12 12:22:30 - info: Login attempt for username: T
+2024-11-12 12:22:30 - error: Login failed for T: Incorrect password
+2024-11-12 12:22:30 - info: Login attempt for username: T
+2024-11-12 12:22:30 - error: Login failed for T: Incorrect password
+2024-11-12 12:22:30 - info: Login attempt for username: T
+2024-11-12 12:22:30 - error: Login failed for T: Incorrect password
+2024-11-12 12:22:30 - info: Login attempt for username: T
+2024-11-12 12:22:31 - error: Login failed for T: Incorrect password
+2024-11-12 12:22:31 - info: Login attempt for username: T
+2024-11-12 12:22:31 - error: Login failed for T: Incorrect password
+2024-11-12 12:22:31 - info: Login attempt for username: T
+2024-11-12 12:22:31 - error: Login failed for T: Incorrect password
+2024-11-12 12:22:31 - info: Login attempt for username: T
+2024-11-12 12:22:31 - error: Login failed for T: Incorrect password
+2024-11-12 12:22:31 - info: Login attempt for username: T
+2024-11-12 12:22:31 - error: Login failed for T: Incorrect password
+2024-11-12 12:22:31 - info: Login attempt for username: T
+2024-11-12 12:22:31 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:10 - info: Login attempt for username: T
+2024-11-12 12:23:10 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:12 - info: Login attempt for username: T
+2024-11-12 12:23:12 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:13 - info: Login attempt for username: T
+2024-11-12 12:23:13 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:14 - info: Login attempt for username: T
+2024-11-12 12:23:14 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:14 - info: Login attempt for username: T
+2024-11-12 12:23:14 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:16 - info: Login attempt for username: T
+2024-11-12 12:23:16 - info: User T logged in successfully
+2024-11-12 12:23:23 - info: Password changed successfully for user T
+2024-11-12 12:23:27 - info: Login attempt for username: T
+2024-11-12 12:23:27 - info: User T logged in successfully
+2024-11-12 12:23:33 - info: Login attempt for username: T
+2024-11-12 12:23:33 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:33 - info: Login attempt for username: T
+2024-11-12 12:23:34 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:34 - info: Login attempt for username: T
+2024-11-12 12:23:34 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:34 - info: Login attempt for username: T
+2024-11-12 12:23:34 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:34 - info: Login attempt for username: T
+2024-11-12 12:23:34 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:35 - info: Login attempt for username: T
+2024-11-12 12:23:35 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:35 - info: Login attempt for username: T
+2024-11-12 12:23:35 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:35 - info: Login attempt for username: T
+2024-11-12 12:23:35 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:35 - info: Login attempt for username: T
+2024-11-12 12:23:35 - error: Login failed for T: Incorrect password
+2024-11-12 12:23:35 - info: Login attempt for username: T
+2024-11-12 12:23:35 - error: Login failed for T: Incorrect password
+2024-11-12 12:27:46 - info: Login attempt for username: ADMIN
+2024-11-12 12:27:46 - info: User ADMIN logged in successfully
+2024-11-12 12:27:49 - info: User created: P
+2024-11-12 12:27:57 - info: Login attempt for username: P
+2024-11-12 12:27:57 - info: User P logged in successfully
+2024-11-12 12:28:00 - info: Login attempt for username: P
+2024-11-12 12:28:00 - error: Login failed for P: Incorrect password
+2024-11-12 12:28:01 - info: Login attempt for username: P
+2024-11-12 12:28:01 - error: Login failed for P: Incorrect password
+2024-11-12 12:28:01 - info: Login attempt for username: P
+2024-11-12 12:28:01 - error: Login failed for P: Incorrect password
+2024-11-12 12:28:01 - info: Login attempt for username: P
+2024-11-12 12:28:01 - error: Login failed for P: Incorrect password
+2024-11-12 12:28:01 - info: Login attempt for username: P
+2024-11-12 12:28:02 - error: Login failed for P: Incorrect password
+2024-11-12 12:28:02 - info: Login attempt for username: P
+2024-11-12 12:28:02 - error: Login failed for P: Incorrect password
+2024-11-12 12:28:02 - info: Login attempt for username: P
+2024-11-12 12:28:02 - error: Login failed for P: Incorrect password
+2024-11-12 12:28:02 - info: Login attempt for username: P
+2024-11-12 12:28:02 - error: Login failed for P: Incorrect password
+2024-11-12 12:28:02 - info: Login attempt for username: P
+2024-11-12 12:28:02 - error: Login failed for P: Incorrect password
+2024-11-12 12:28:02 - info: Login attempt for username: P
+2024-11-12 12:28:02 - error: Login failed for P: Incorrect password
+2024-11-12 12:29:19 - info: Login attempt for username: ADMIN
+2024-11-12 12:29:19 - info: User ADMIN logged in successfully
+2024-11-12 12:34:01 - info: Login attempt for username: ADMIN
+2024-11-12 12:34:01 - info: User ADMIN logged in successfully
+2024-11-12 12:34:04 - info: User created: JO
+2024-11-12 12:34:24 - info: Login attempt for username: JO
+2024-11-12 12:34:24 - info: User JO logged in successfully
+2024-11-12 12:34:28 - info: Login attempt for username: JO
+2024-11-12 12:34:28 - error: Login failed for JO: Incorrect password
+2024-11-12 12:34:32 - info: Login attempt for username: JO
+2024-11-12 12:34:32 - error: Login failed for JO: Incorrect password
+2024-11-12 12:34:33 - info: Login attempt for username: JO
+2024-11-12 12:34:33 - error: Login failed for JO: Incorrect password
+2024-11-12 12:34:33 - info: Login attempt for username: JO
+2024-11-12 12:34:33 - error: Login failed for JO: Incorrect password
+2024-11-12 12:34:33 - info: Login attempt for username: JO
+2024-11-12 12:34:33 - error: Login failed for JO: Incorrect password
+2024-11-12 12:34:34 - info: Login attempt for username: JO
+2024-11-12 12:34:34 - error: Login failed for JO: Incorrect password
+2024-11-12 12:34:34 - info: Login attempt for username: JO
+2024-11-12 12:34:34 - error: Login failed for JO: Incorrect password
+2024-11-12 12:34:34 - info: Login attempt for username: JO
+2024-11-12 12:34:34 - error: Login failed for JO: Incorrect password
+2024-11-12 12:34:34 - info: Login attempt for username: JO
+2024-11-12 12:34:34 - error: Login failed for JO: Incorrect password
+2024-11-12 12:34:35 - info: Login attempt for username: JO
+2024-11-12 12:34:35 - error: Login failed for JO: Incorrect password
+2024-11-12 12:34:35 - info: Login attempt for username: JO
+2024-11-12 12:34:35 - error: Login failed for JO: Incorrect password
+2024-11-12 12:34:35 - info: Login attempt for username: JO
+2024-11-12 12:34:35 - error: Login failed for JO: Incorrect password
+2024-11-12 12:42:38 - info: Login attempt for username: ADMIN
+2024-11-12 12:42:38 - info: User ADMIN logged in successfully
+2024-11-12 12:42:42 - info: User created: X
+2024-11-12 12:42:47 - info: Login attempt for username: X
+2024-11-12 12:42:47 - error: Login failed for X: Incorrect password
+2024-11-12 12:42:49 - info: Login attempt for username: X
+2024-11-12 12:42:49 - error: Login failed for X: Incorrect password
+2024-11-12 12:42:50 - info: Login attempt for username: X
+2024-11-12 12:42:50 - error: Login failed for X: Incorrect password
+2024-11-12 12:42:51 - info: Login attempt for username: X
+2024-11-12 12:42:51 - error: Login failed for X: Incorrect password
+2024-11-12 12:42:51 - info: Login attempt for username: X
+2024-11-12 12:42:51 - error: Login failed for X: Incorrect password
+2024-11-12 12:42:52 - info: Login attempt for username: X
+2024-11-12 12:42:52 - error: Login failed for X: Incorrect password
+2024-11-12 12:42:53 - info: Login attempt for username: X
+2024-11-12 12:42:53 - error: Login failed for X: Incorrect password
+2024-11-12 12:42:53 - info: Login attempt for username: X
+2024-11-12 12:42:53 - error: Login failed for X: Incorrect password
+2024-11-12 12:42:53 - info: Login attempt for username: X
+2024-11-12 12:42:53 - error: Login failed for X: Incorrect password
+2024-11-12 12:42:54 - info: Login attempt for username: X
+2024-11-12 12:42:54 - error: Login failed for X: Incorrect password
+2024-11-12 12:42:54 - info: Login attempt for username: X
+2024-11-12 12:42:54 - error: Login failed for X: Incorrect password
+2024-11-12 12:43:02 - info: Login attempt for username: X
+2024-11-12 12:43:02 - info: User X logged in successfully
+2024-11-12 12:43:06 - info: Login attempt for username: X
+2024-11-12 12:43:06 - error: Login failed for X: Incorrect password
+2024-11-12 12:43:07 - info: Login attempt for username: X
+2024-11-12 12:43:07 - error: Login failed for X: Incorrect password
+2024-11-12 12:43:07 - info: Login attempt for username: X
+2024-11-12 12:43:07 - error: Login failed for X: Incorrect password
+2024-11-12 12:43:07 - info: Login attempt for username: X
+2024-11-12 12:43:07 - error: Login failed for X: Incorrect password
+2024-11-12 12:43:07 - info: Login attempt for username: X
+2024-11-12 12:43:07 - error: Login failed for X: Incorrect password
+2024-11-12 12:43:08 - info: Login attempt for username: X
+2024-11-12 12:43:08 - error: Login failed for X: Incorrect password
+2024-11-12 12:53:46 - info: Login attempt for username: ADMIN
+2024-11-12 12:53:47 - info: User ADMIN logged in successfully
+2024-11-12 12:53:50 - info: User created: PO
+2024-11-12 12:53:55 - info: Login attempt for username: PO
+2024-11-12 12:53:55 - error: Login failed for PO: Incorrect password
+2024-11-12 12:53:56 - info: Login attempt for username: PO
+2024-11-12 12:53:56 - error: Login failed for PO: Incorrect password
+2024-11-12 12:53:56 - info: Login attempt for username: PO
+2024-11-12 12:53:56 - error: Login failed for PO: Incorrect password
+2024-11-12 12:53:57 - info: Login attempt for username: PO
+2024-11-12 12:53:57 - error: Login failed for PO: Incorrect password
+2024-11-12 12:53:58 - info: Login attempt for username: PO
+2024-11-12 12:53:58 - error: Login failed for PO: Incorrect password
+2024-11-12 12:53:58 - info: Login attempt for username: PO
+2024-11-12 12:53:58 - error: Login failed for PO: Incorrect password
+2024-11-12 12:53:58 - info: Login attempt for username: PO
+2024-11-12 12:53:58 - error: Login failed for PO: Incorrect password
+2024-11-12 12:53:58 - info: Login attempt for username: PO
+2024-11-12 12:53:59 - error: Login failed for PO: Incorrect password
+2024-11-12 12:53:59 - info: Login attempt for username: PO
+2024-11-12 12:53:59 - error: Login failed for PO: Incorrect password
+2024-11-12 12:53:59 - info: Login attempt for username: PO
+2024-11-12 12:53:59 - error: Login failed for PO: Incorrect password
+2024-11-12 12:54:01 - info: Login attempt for username: PO
+2024-11-12 12:54:01 - info: User PO logged in successfully
+2024-11-12 12:54:05 - info: Login attempt for username: PO
+2024-11-12 12:54:05 - error: Login failed for PO: Incorrect password
+2024-11-12 12:54:05 - info: Login attempt for username: PO
+2024-11-12 12:54:05 - error: Login failed for PO: Incorrect password
+2024-11-12 12:54:05 - info: Login attempt for username: PO
+2024-11-12 12:54:06 - error: Login failed for PO: Incorrect password
+2024-11-12 12:54:06 - info: Login attempt for username: PO
+2024-11-12 12:54:06 - error: Login failed for PO: Incorrect password
+2024-11-13 23:05:38 - info: Login attempt for username: ADMIN
+2024-11-13 23:05:38 - info: User ADMIN logged in successfully
+2024-11-13 23:05:40 - info: User deleted: PO
+2024-11-13 23:05:42 - info: User deleted: git
+2024-11-13 23:05:44 - info: User deleted: dep
+2024-11-13 23:05:46 - info: User deleted: T
+2024-11-13 23:05:48 - info: User deleted: P
+2024-11-13 23:05:49 - info: User deleted: JO
+2024-11-13 23:05:53 - info: User created: U
+2024-11-13 23:06:01 - info: Login attempt for username: U
+2024-11-13 23:06:01 - error: Login failed for U: Incorrect password
+2024-11-13 23:06:06 - info: Login attempt for username: U
+2024-11-13 23:06:06 - error: Login failed for U: Incorrect password
+2024-11-13 23:06:07 - info: Login attempt for username: U
+2024-11-13 23:06:07 - error: Login failed for U: Incorrect password
+2024-11-13 23:06:08 - info: Login attempt for username: U
+2024-11-13 23:06:08 - error: Login failed for U: Incorrect password
+2024-11-13 23:06:10 - info: Login attempt for username: U
+2024-11-13 23:06:10 - error: Login failed for U: Incorrect password
+2024-11-13 23:06:11 - info: Login attempt for username: U
+2024-11-13 23:06:11 - error: Login failed for U: Incorrect password
+2024-11-13 23:06:12 - info: Login attempt for username: U
+2024-11-13 23:06:12 - error: Login failed for U: Incorrect password
+2024-11-13 23:06:14 - info: Login attempt for username: U
+2024-11-13 23:06:14 - info: User U logged in successfully
+2024-11-13 23:06:23 - info: Login attempt for username: U
+2024-11-13 23:06:23 - error: Login failed for U: Incorrect password
+2024-11-13 23:10:48 - info: Login attempt for username: ADMIN
+2024-11-13 23:10:48 - info: User ADMIN logged in successfully
+2024-11-13 23:10:52 - info: User created: O
+2024-11-13 23:10:58 - info: Login attempt for username: O
+2024-11-13 23:10:58 - error: Login failed for O: Incorrect password
+2024-11-13 23:11:01 - info: Login attempt for username: O
+2024-11-13 23:11:01 - error: Login failed for O: Incorrect password
+2024-11-13 23:11:02 - info: Login attempt for username: O
+2024-11-13 23:11:02 - error: Login failed for O: Incorrect password
+2024-11-13 23:11:03 - info: Login attempt for username: O
+2024-11-13 23:11:03 - error: Login failed for O: Incorrect password
+2024-11-13 23:11:04 - info: Login attempt for username: O
+2024-11-13 23:11:04 - error: Login failed for O: Incorrect password
+2024-11-13 23:11:05 - info: Login attempt for username: O
+2024-11-13 23:11:05 - error: Login failed for O: Incorrect password
+2024-11-13 23:11:06 - info: Login attempt for username: O
+2024-11-13 23:11:06 - error: Login failed for O: Incorrect password
+2024-11-13 23:11:08 - info: Login attempt for username: O
+2024-11-13 23:11:08 - info: User O logged in successfully
+2024-11-13 23:24:05 - info: User ADMIN logged in
+2024-11-13 23:24:09 - info: User created: KO
+2024-11-13 23:24:15 - error: Login failed for KO: Incorrect password
+2024-11-13 23:24:15 - error: Error logging in KO: logActivity is not defined
+2024-11-13 23:24:20 - error: Login failed for KO: Incorrect password
+2024-11-13 23:24:20 - error: Error logging in KO: logActivity is not defined
+2024-11-13 23:24:30 - info: User KO logged in
+2024-11-13 23:24:34 - error: Login failed for KO: Incorrect password
+2024-11-13 23:24:34 - error: Error logging in KO: logActivity is not defined
+2024-11-13 23:24:35 - error: Login failed for KO: Incorrect password
+2024-11-13 23:24:35 - error: Error logging in KO: logActivity is not defined
+2024-11-13 23:24:36 - error: Login failed for KO: Incorrect password
+2024-11-13 23:24:36 - error: Error logging in KO: logActivity is not defined
+2024-11-13 23:24:37 - error: Login failed for KO: Incorrect password
+2024-11-13 23:24:37 - error: Error logging in KO: logActivity is not defined
+2024-11-13 23:24:38 - error: Login failed for KO: Incorrect password
+2024-11-13 23:24:38 - error: Error logging in KO: logActivity is not defined
+2024-11-13 23:24:39 - error: Login failed for KO: Incorrect password
+2024-11-13 23:24:39 - error: Error logging in KO: logActivity is not defined
+2024-11-13 23:24:42 - error: Login failed for KO: Incorrect password
+2024-11-13 23:24:42 - error: Error logging in KO: logActivity is not defined
+2024-11-13 23:24:45 - info: User KO logged in
+2024-11-13 23:28:56 - info: User ADMIN logged in
+2024-11-13 23:29:01 - info: User created: F
+2024-11-13 23:29:09 - error: Login failed for F: Incorrect password
+2024-11-13 23:29:12 - error: Login failed for F: Incorrect password
+2024-11-13 23:29:13 - error: Login failed for F: Incorrect password
+2024-11-13 23:29:14 - error: Login failed for F: Incorrect password
+2024-11-13 23:29:15 - error: Login failed for F: Incorrect password
+2024-11-13 23:29:15 - warn: User F has been locked out until Wed Nov 13 2024 23:44:15 GMT+0100 (Central European Standard Time)
+2024-11-13 23:29:16 - warn: Locked account attempt for F
+2024-11-13 23:29:35 - warn: Locked account attempt for F
+2024-11-13 23:29:48 - info: User ADMIN logged in
+2024-11-13 23:30:29 - warn: Locked account attempt for F
+2024-11-13 23:32:19 - warn: Locked account attempt for F

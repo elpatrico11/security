@@ -23,7 +23,7 @@ app.use(
     resave: false,
     saveUninitialized: true,
     cookie: {
-      maxAge: 1 * 60 * 1000, // Session duration: 1 minute for testing
+      maxAge: 15 * 60 * 1000, // Session duration: 15min
       httpOnly: true,
       secure: process.env.NODE_ENV === "production", // Set to true in production
     },

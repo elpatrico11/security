@@ -2,6 +2,11 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const logger = require("../logger");
+const { logActivity } = require("../middlewares/activityLogger");
+
+// Constants for failed attempts and lockout duration
+const MAX_FAILED_ATTEMPTS = 5;
+const LOCKOUT_DURATION = 15 * 60 * 1000; // 15 minutes in milliseconds
 
 exports.login = async (req, res) => {
   const { username, password } = req.body;
@@ -9,16 +14,61 @@ exports.login = async (req, res) => {
   try {
     const user = await User.findOne({ username });
 
-    if (!user || user.blocked) {
+    if (!user) {
       logger.error(`Login failed for ${username}`);
+      return res.status(401).json({ message: "Invalid username or password" });
+    }
+
+    // Check if the user is locked
+    if (user.isLocked) {
+      const remainingTime = Math.ceil((user.lockUntil - Date.now()) / 1000); // in seconds
+      logger.warn(`Locked account attempt for ${username}`);
+      return res.status(403).json({
+        message: `Account is locked. Try again in ${remainingTime} seconds.`,
+        lockout: true,
+        remainingTime,
+      });
+    }
+
+    if (user.blocked) {
+      logger.error(`Login failed for ${username}: Account is blocked`);
       return res.status(401).json({ message: "Invalid username or password" });
     }
 
     const isMatch = await user.matchPassword(password);
     if (!isMatch) {
+      user.failedLoginAttempts += 1;
       logger.error(`Login failed for ${username}: Incorrect password`);
+
+      if (user.failedLoginAttempts >= MAX_FAILED_ATTEMPTS) {
+        // Correctly set lockUntil as a Date object
+        user.lockUntil = new Date(Date.now() + LOCKOUT_DURATION);
+        logger.warn(
+          `User ${username} has been locked out until ${user.lockUntil}`
+        );
+        await logActivity(
+          username,
+          "LOGIN_LOCKED",
+          `User locked out until ${user.lockUntil}`,
+          "ERROR"
+        );
+      } else {
+        await logActivity(
+          username,
+          "LOGIN_FAILED",
+          "Incorrect password",
+          "ERROR"
+        );
+      }
+
+      await user.save();
       return res.status(401).json({ message: "Invalid username or password" });
     }
+
+    // Successful login
+    user.failedLoginAttempts = 0;
+    user.lockUntil = null;
+    await user.save();
 
     // Include `username` in the JWT token payload
     const token = jwt.sign(
@@ -31,6 +81,7 @@ exports.login = async (req, res) => {
     res.json({ token, role: user.role });
   } catch (error) {
     logger.error(`Error logging in ${username}: ${error.message}`);
+    logger.error(error.stack); // Log stack trace for debugging
     res.status(500).json({ message: "Server error" });
   }
 };

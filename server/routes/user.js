@@ -8,7 +8,7 @@ const {
 } = require("../controllers/userController");
 const router = express.Router();
 
-const SESSION_TIMEOUT_DURATION = 1 * 60 * 1000; // 1 minute timeout
+const SESSION_TIMEOUT_DURATION = 15 * 60 * 1000; // 1 minute timeout
 
 router.get("/status", protect, sessionTimeout, getUserStatus);
 router.post("/change-password", protect, sessionTimeout, changeUserPassword);

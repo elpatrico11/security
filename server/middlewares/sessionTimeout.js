@@ -8,7 +8,8 @@ const sessionTimeout = async (req, res, next) => {
     const user = await User.findById(userId);
     if (!user) return next();
 
-    const sessionTimeoutDuration = user.sessionTimeoutDuration || 1 * 60 * 1000; // 1 minute
+    const sessionTimeoutDuration =
+      user.sessionTimeoutDuration || 15 * 60 * 1000; // 15min
 
     // Initialize `lastActive` if it doesn't exist
     if (!req.session.lastActive) {
