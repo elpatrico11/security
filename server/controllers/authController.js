@@ -6,7 +6,7 @@ const { logActivity } = require("../middlewares/activityLogger");
 
 // Constants for failed attempts and lockout duration
 const MAX_FAILED_ATTEMPTS = 5;
-const LOCKOUT_DURATION = 15 * 60 * 1000; // 15 minutes in milliseconds
+const LOCKOUT_DURATION = 15 * 60 * 1000;
 
 exports.login = async (req, res) => {
   const { username, password } = req.body;
@@ -65,12 +65,10 @@ exports.login = async (req, res) => {
       return res.status(401).json({ message: "Invalid username or password" });
     }
 
-    // Successful login
     user.failedLoginAttempts = 0;
     user.lockUntil = null;
     await user.save();
 
-    // Include `username` in the JWT token payload
     const token = jwt.sign(
       { id: user._id, role: user.role, username: user.username },
       process.env.JWT_SECRET,
@@ -81,7 +79,6 @@ exports.login = async (req, res) => {
     res.json({ token, role: user.role });
   } catch (error) {
     logger.error(`Error logging in ${username}: ${error.message}`);
-    logger.error(error.stack); // Log stack trace for debugging
     res.status(500).json({ message: "Server error" });
   }
 };

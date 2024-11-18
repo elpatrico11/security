@@ -806,3 +806,16 @@
 2024-11-13 23:29:48 - info: User ADMIN logged in
 2024-11-13 23:30:29 - warn: Locked account attempt for F
 2024-11-13 23:32:19 - warn: Locked account attempt for F
+2024-11-18 12:03:28 - info: User ADMIN logged in
+2024-11-18 12:03:31 - info: User deleted: F
+2024-11-18 12:08:38 - info: User created: Johnyy12
+2024-11-18 12:11:46 - info: User created: bro
+2024-11-18 12:14:08 - info: User created: kan
+2024-11-18 12:14:12 - error: Login failed for kan: Incorrect password
+2024-11-18 12:14:12 - error: Login failed for kan: Incorrect password
+2024-11-18 12:14:13 - error: Login failed for kan: Incorrect password
+2024-11-18 12:14:13 - error: Login failed for kan: Incorrect password
+2024-11-18 12:14:13 - error: Login failed for kan: Incorrect password
+2024-11-18 12:14:13 - warn: User kan has been locked out until Mon Nov 18 2024 12:29:13 GMT+0100 (Central European Standard Time)
+2024-11-18 12:14:13 - warn: Locked account attempt for kan
+2024-11-18 12:16:06 - info: User ADMIN logged in
