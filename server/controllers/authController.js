@@ -3,19 +3,52 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const logger = require("../logger");
 const { logActivity } = require("../middlewares/activityLogger");
+const jwtCaptcha = require("jsonwebtoken");
 
 // Constants for failed attempts and lockout duration
 const MAX_FAILED_ATTEMPTS = 5;
-const LOCKOUT_DURATION = 15 * 60 * 1000;
+const LOCKOUT_DURATION = 15 * 60 * 1000; // 15 minutes in milliseconds
 
+// Login controller
 exports.login = async (req, res) => {
-  const { username, password } = req.body;
+  const { username, password, captchaAnswer, captchaToken } = req.body;
+
+  // Ensure all required fields are present
+  if (!username || !password || !captchaAnswer || !captchaToken) {
+    return res.status(400).json({ message: "All fields are required" });
+  }
 
   try {
+    // Verify CAPTCHA token
+    let decodedCaptcha;
+    try {
+      decodedCaptcha = jwtCaptcha.verify(
+        captchaToken,
+        process.env.CAPTCHA_SECRET
+      );
+    } catch (err) {
+      logger.error(
+        `CAPTCHA verification failed for ${username}: ${err.message}`
+      );
+      return res.status(400).json({ message: "Invalid or expired CAPTCHA" });
+    }
+
+    // Compare CAPTCHA answer
+    if (captchaAnswer.trim().toLowerCase() !== decodedCaptcha.answer) {
+      logger.error(`CAPTCHA answer incorrect for ${username}`);
+      await logActivity(
+        username,
+        "CAPTCHA_FAILED",
+        "Incorrect CAPTCHA answer",
+        "ERROR"
+      );
+      return res.status(400).json({ message: "Incorrect CAPTCHA answer" });
+    }
+
     const user = await User.findOne({ username });
 
     if (!user) {
-      logger.error(`Login failed for ${username}`);
+      logger.error(`Login failed for ${username}: User not found`);
       return res.status(401).json({ message: "Invalid username or password" });
     }
 
@@ -65,20 +98,40 @@ exports.login = async (req, res) => {
       return res.status(401).json({ message: "Invalid username or password" });
     }
 
+    // Successful password verification
     user.failedLoginAttempts = 0;
     user.lockUntil = null;
-    await user.save();
 
+    // Check if OTP is required
+    if (user.otp && user.otpExpiry && user.otpExpiry > Date.now()) {
+      await user.save(); // Save the reset fields
+      logger.info(`OTP required for user ${username}`);
+      return res
+        .status(200)
+        .json({ message: "OTP required", otpRequired: true, userId: user._id });
+    }
+
+    await user.save(); // Save the reset fields
+
+    // Generate JWT token
     const token = jwt.sign(
       { id: user._id, role: user.role, username: user.username },
       process.env.JWT_SECRET,
       { expiresIn: "1h" }
     );
 
-    logger.info(`User ${username} logged in`);
+    logger.info(`User ${username} logged in successfully`);
+    await logActivity(
+      username,
+      "LOGIN",
+      "User logged in successfully",
+      "SUCCESS"
+    );
+
     res.json({ token, role: user.role });
   } catch (error) {
     logger.error(`Error logging in ${username}: ${error.message}`);
+    logger.error(error.stack); // Log stack trace for debugging
     res.status(500).json({ message: "Server error" });
   }
 };

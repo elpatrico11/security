@@ -3,12 +3,14 @@ const jwt = require("jsonwebtoken");
 const logger = require("../logger");
 const { logActivity } = require("../middlewares/activityLogger");
 const { protect } = require("../middlewares/auth");
+const bcrypt = require("bcryptjs");
 
 const User = require("../models/User");
 const router = express.Router();
 
 // Import controller methods
 const authController = require("../controllers/authController");
+const captchaController = require("../controllers/captchaController"); // Import CAPTCHA controller
 
 // Helper function to validate OTP
 const validateOTP = async (enteredOTP, hashedOTP) => {
@@ -49,6 +51,10 @@ router.get("/verify", async (req, res) => {
   }
 });
 
+// CAPTCHA endpoint
+router.get("/captcha", captchaController.getCaptcha);
+
+//OTP verification route
 router.post("/verify-otp", async (req, res) => {
   const { userId, otp } = req.body;
 

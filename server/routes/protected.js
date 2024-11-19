@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { protect } = require("../middlewares/auth"); // Adjust the path as necessary
+const { protect } = require("../middlewares/auth");
 
 // Example protected route
 router.get("/protected", protect, (req, res) => {

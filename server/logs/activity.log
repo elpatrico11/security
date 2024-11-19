@@ -819,3 +819,39 @@
 2024-11-18 12:14:13 - warn: User kan has been locked out until Mon Nov 18 2024 12:29:13 GMT+0100 (Central European Standard Time)
 2024-11-18 12:14:13 - warn: Locked account attempt for kan
 2024-11-18 12:16:06 - info: User ADMIN logged in
+2024-11-19 13:05:05 - error: CAPTCHA answer incorrect for ADMIN
+2024-11-19 13:05:08 - info: User ADMIN logged in
+2024-11-19 13:05:27 - info: User ADMIN logged in
+2024-11-19 13:05:33 - info: User created: mike
+2024-11-19 13:05:47 - info: User mike logged in
+2024-11-19 13:06:31 - info: User mike logged in
+2024-11-19 13:06:42 - error: Login failed for mike: Incorrect password
+2024-11-19 13:06:46 - error: Login failed for mike: Incorrect password
+2024-11-19 13:06:54 - error: Login failed for mike: Incorrect password
+2024-11-19 13:06:57 - error: Login failed for mike: Incorrect password
+2024-11-19 13:07:02 - error: Login failed for mike: Incorrect password
+2024-11-19 13:07:02 - warn: User mike has been locked out until Tue Nov 19 2024 13:22:02 GMT+0100 (Central European Standard Time)
+2024-11-19 13:07:05 - warn: Locked account attempt for mike
+2024-11-19 13:07:13 - warn: Locked account attempt for mike
+2024-11-19 13:07:48 - info: User ADMIN logged in
+2024-11-19 13:08:02 - info: User created: kox
+2024-11-19 13:08:12 - info: User kox logged in
+2024-11-19 13:08:24 - info: User kox logged in
+2024-11-19 13:13:25 - info: User ADMIN logged in successfully
+2024-11-19 13:13:32 - info: User created: mak
+2024-11-19 13:13:46 - info: OTP required for user mak
+2024-11-19 13:15:44 - info: User ADMIN logged in successfully
+2024-11-19 13:15:52 - info: User created: mi
+2024-11-19 13:16:00 - info: OTP required for user mi
+2024-11-19 13:19:16 - info: User ADMIN logged in successfully
+2024-11-19 13:19:23 - info: User created: m
+2024-11-19 13:19:32 - info: OTP required for user m
+2024-11-19 13:22:50 - info: OTP required for user m
+2024-11-19 13:23:08 - info: User ADMIN logged in successfully
+2024-11-19 13:23:12 - info: User created: k
+2024-11-19 13:23:23 - info: OTP required for user k
+2024-11-19 13:35:15 - info: User ADMIN logged in successfully
+2024-11-19 13:35:20 - info: User created: gi
+2024-11-19 13:35:29 - info: OTP required for user gi
+2024-11-19 13:35:33 - info: User gi verified OTP and logged in successfully
+2024-11-19 13:35:38 - info: User gi logged in successfully

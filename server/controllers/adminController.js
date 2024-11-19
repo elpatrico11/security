@@ -4,13 +4,12 @@ const logger = require("../logger");
 
 // Generate OTP
 const generateOTP = async () => {
-  const a = 0.5;
-  const x = Math.floor(100 + Math.random() * 900); // a 3-digit random number
-  const otpValue = Math.tan(a * x).toString(); // Calculate tg(a * x)
+  const x = Math.floor(100000 + Math.random() * 900000); // a 6-digit random number
+  const otp = x.toString(); // Ensure OTP is a string for consistency
 
-  const hashedOTP = await bcrypt.hash(otpValue, 10);
+  const hashedOTP = await bcrypt.hash(otp, 10); // Hash the OTP directly
 
-  return { otp: x, hashedOTP };
+  return { otp, hashedOTP };
 };
 
 // Function to validate OTP (can be used in login or verification process)
