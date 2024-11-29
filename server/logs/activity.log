@@ -855,3 +855,72 @@
 2024-11-19 13:35:29 - info: OTP required for user gi
 2024-11-19 13:35:33 - info: User gi verified OTP and logged in successfully
 2024-11-19 13:35:38 - info: User gi logged in successfully
+2024-11-19 14:06:02 - info: User ADMIN logged in successfully
+2024-11-19 14:06:25 - error: reCAPTCHA verification failed for admin ID 6726462bc4041cd375b1a22b
+2024-11-19 14:06:50 - error: reCAPTCHA verification failed for admin ID 6726462bc4041cd375b1a22b
+2024-11-19 14:08:00 - error: reCAPTCHA verification failed for admin ID 6726462bc4041cd375b1a22b
+2024-11-19 14:11:01 - error: reCAPTCHA verification failed for admin ID 6726462bc4041cd375b1a22b
+2024-11-19 14:13:23 - error: reCAPTCHA verification failed for admin ID 6726462bc4041cd375b1a22b
+2024-11-19 14:15:52 - error: reCAPTCHA verification failed for admin ID 6726462bc4041cd375b1a22b: invalid-input-response
+2024-11-19 14:17:32 - error: reCAPTCHA verification failed for admin ID 6726462bc4041cd375b1a22b: invalid-input-response
+2024-11-19 14:27:01 - error: reCAPTCHA verification failed for admin ID 6726462bc4041cd375b1a22b: invalid-input-response
+2024-11-19 14:31:24 - error: reCAPTCHA verification failed for admin ID 6726462bc4041cd375b1a22b: invalid-input-response
+2024-11-19 14:55:05 - error: reCAPTCHA verification failed for admin ID 6726462bc4041cd375b1a22b: invalid-input-response
+2024-11-19 15:02:32 - info: User ADMIN logged in successfully
+2024-11-19 15:03:05 - info: Admin password changed for ADMIN
+2024-11-19 15:03:26 - info: User ADMIN logged in successfully
+2024-11-19 15:04:05 - info: Admin password changed for ADMIN
+2024-11-19 15:10:02 - info: User deleted: m
+2024-11-19 15:10:07 - info: User deleted: gi
+2024-11-19 15:10:11 - info: User deleted: k
+2024-11-19 15:10:20 - info: User deleted: U
+2024-11-19 15:10:24 - info: User deleted: X
+2024-11-19 15:10:26 - info: User deleted: O
+2024-11-19 15:10:28 - info: User deleted: KO
+2024-11-19 15:10:30 - info: User deleted: Johnyy12
+2024-11-19 15:10:32 - info: User deleted: kan
+2024-11-19 15:10:34 - info: User deleted: bro
+2024-11-19 15:10:36 - info: User deleted: mike
+2024-11-19 15:10:38 - info: User deleted: kox
+2024-11-19 15:10:40 - info: User deleted: mak
+2024-11-19 15:10:42 - info: User deleted: mi
+2024-11-19 15:11:39 - info: User ADMIN logged in successfully
+2024-11-19 15:12:05 - info: Admin password changed for ADMIN
+2024-11-19 15:15:08 - info: Admin password changed for ADMIN
+2024-11-19 15:17:10 - info: Admin password changed for ADMIN
+2024-11-19 15:23:23 - error: Login failed for ADMIN: Incorrect password
+2024-11-19 15:23:31 - info: User ADMIN logged in successfully
+2024-11-19 15:23:47 - error: reCAPTCHA verification failed for admin ID 6726462bc4041cd375b1a22b: invalid-keys, response: {"success":false,"error-codes":["invalid-keys"]}
+2024-11-19 15:24:35 - info: Admin password changed for ADMIN
+2024-11-19 15:29:38 - info: Admin password changed for ADMIN
+2024-11-19 15:35:31 - error: Login failed for ADMIN: Incorrect password
+2024-11-19 15:35:36 - info: User ADMIN logged in successfully
+2024-11-19 15:35:52 - info: Admin password changed for ADMIN
+2024-11-19 15:46:02 - error: CAPTCHA answer incorrect for ADMIN
+2024-11-19 15:46:05 - info: User ADMIN logged in successfully
+2024-11-19 15:46:28 - info: Admin password changed for ADMIN
+2024-11-19 15:49:50 - error: Login failed for ADMIN: Incorrect password
+2024-11-19 15:49:52 - error: Login failed for ADMIN: Incorrect password
+2024-11-19 15:49:59 - info: User ADMIN logged in successfully
+2024-11-19 15:50:21 - info: Admin password changed for ADMIN
+2024-11-19 15:50:33 - info: User ADMIN logged in successfully
+2024-11-19 15:57:34 - info: User ADMIN logged in successfully
+2024-11-19 16:01:19 - info: User ADMIN logged in successfully
+2024-11-19 16:01:45 - info: Admin password changed for ADMIN
+2024-11-19 16:08:10 - info: User ADMIN logged in successfully
+2024-11-19 16:08:45 - error: Password change failed for ADMIN: Incorrect current password
+2024-11-19 16:09:06 - error: Login failed for ADMIN: Incorrect password
+2024-11-19 16:09:09 - info: User ADMIN logged in successfully
+2024-11-19 16:09:51 - error: Login failed for ADMIN: Incorrect password
+2024-11-19 16:09:56 - error: CAPTCHA answer incorrect for ADMIN
+2024-11-19 16:10:00 - info: User ADMIN logged in successfully
+2024-11-19 16:10:19 - info: Admin password changed for ADMIN
+2024-11-19 16:18:51 - info: User created: ko
+2024-11-19 16:18:56 - info: User ko logged in successfully
+2024-11-19 16:19:13 - info: Password changed successfully for user ko
+2024-11-25 12:14:00 - info: User ADMIN logged in successfully
+2024-11-25 12:14:11 - info: User created: ri
+2024-11-25 12:14:29 - error: CAPTCHA answer incorrect for ri
+2024-11-25 12:14:32 - info: User ri logged in successfully
+2024-11-25 12:30:51 - error: CAPTCHA answer incorrect for ADMIN
+2024-11-25 12:51:37 - info: User ADMIN logged in successfully

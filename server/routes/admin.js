@@ -1,3 +1,4 @@
+// server/routes/admin.js
 const express = require("express");
 const { protect, adminOnly } = require("../middlewares/auth");
 const { logActivity } = require("../middlewares/activityLogger");
@@ -58,7 +59,7 @@ router.put("/change-password", protect, adminOnly, async (req, res) => {
       "Failed to change admin password",
       "ERROR"
     );
-    res.status(500).json({ message: "Failed to change password" });
+    // The controller already sends a response in case of errors, so avoid sending another one
   }
 });
 
@@ -82,7 +83,7 @@ router.post("/add-user", protect, adminOnly, async (req, res) => {
       `Failed to create user ${req.body.username}`,
       "ERROR"
     );
-    res.status(500).json({ message: "Failed to create user" });
+    // The controller already sends a response in case of errors, so avoid sending another one
   }
 });
 
@@ -106,7 +107,7 @@ router.put("/block-user/:id", protect, adminOnly, async (req, res) => {
       `Failed to block user ${req.params.id}`,
       "ERROR"
     );
-    res.status(500).json({ message: "Failed to block user" });
+    // The controller already sends a response in case of errors, so avoid sending another one
   }
 });
 
@@ -128,7 +129,7 @@ router.put("/unblock-user/:id", protect, adminOnly, async (req, res) => {
       `Failed to unblock user ${req.params.id}`,
       "ERROR"
     );
-    res.status(500).json({ message: "Failed to unblock user" });
+    // The controller already sends a response in case of errors, so avoid sending another one
   }
 });
 
@@ -150,7 +151,7 @@ router.delete("/delete-user/:id", protect, adminOnly, async (req, res) => {
       `Failed to delete user ${req.params.id}`,
       "ERROR"
     );
-    res.status(500).json({ message: "Failed to delete user" });
+    // The controller already sends a response in case of errors, so avoid sending another one
   }
 });
 
@@ -186,7 +187,7 @@ router.post("/generate-otp", protect, adminOnly, async (req, res) => {
       "Failed to generate one-time password",
       "ERROR"
     );
-    res.status(500).json({ message: "Failed to generate OTP" });
+    // The controller already sends a response in case of errors, so avoid sending another one
   }
 });
 

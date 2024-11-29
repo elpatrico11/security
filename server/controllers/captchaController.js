@@ -39,7 +39,6 @@ const getRandomCaptcha = () => {
   return captchaList[index];
 };
 
-// Controller to serve a CAPTCHA question
 exports.getCaptcha = (req, res) => {
   const captcha = getRandomCaptcha();
   const captchaToken = jwt.sign(

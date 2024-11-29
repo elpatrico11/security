@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const logger = require("../logger");
+const axios = require("axios");
 
 // Generate OTP
 const generateOTP = async () => {
@@ -18,11 +19,56 @@ const validateOTP = async (enteredOTP, hashedOTP) => {
 };
 
 // Change Admin Password
+
+const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
+
 exports.changeAdminPassword = async (req, res) => {
-  const { currentPassword, newPassword } = req.body;
+  const { currentPassword, newPassword, recaptchaToken } = req.body;
   const adminId = req.user.id;
 
+  // Check if reCAPTCHA token is present
+  if (!recaptchaToken) {
+    logger.error(`reCAPTCHA token missing for admin ID ${adminId}`);
+    return res
+      .status(400)
+      .json({ message: "reCAPTCHA verification failed. Token missing." });
+  }
+
+  console.log("RECAPTCHA_SECRET_KEY:", RECAPTCHA_SECRET_KEY); // Verify secret key loading
+  console.log("Received reCAPTCHA Token in Backend:", recaptchaToken); // Confirm token is received
+
   try {
+    // Verify reCAPTCHA token with Google
+    const verificationURL = `https://www.google.com/recaptcha/api/siteverify`;
+
+    const params = new URLSearchParams();
+    params.append("secret", RECAPTCHA_SECRET_KEY);
+    params.append("response", recaptchaToken);
+    // Optionally, include 'remoteip'
+    // params.append('remoteip', req.ip);
+
+    const response = await axios.post(verificationURL, params.toString(), {
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    });
+
+    console.log("reCAPTCHA Verification Response:", response.data); // Log the response
+
+    const { success, "error-codes": errorCodes } = response.data;
+
+    if (!success) {
+      logger.error(
+        `reCAPTCHA verification failed for admin ID ${adminId}: ${errorCodes}, response: ${JSON.stringify(
+          response.data
+        )}`
+      );
+      return res
+        .status(400)
+        .json({ message: "reCAPTCHA verification failed.", errorCodes });
+    }
+
+    // Proceed with password change
     const admin = await User.findById(adminId);
     if (!admin) return res.status(404).json({ message: "Admin not found" });
 
@@ -33,6 +79,16 @@ exports.changeAdminPassword = async (req, res) => {
       );
       return res.status(400).json({ message: "Current password is incorrect" });
     }
+
+    // Validate password requirements (if any)
+    if (newPassword.length < 8) {
+      return res
+        .status(400)
+        .json({ message: "New password must be at least 8 characters long." });
+    }
+
+    // Further password validation can be added here (e.g., complexity)
+
     const salt = await bcrypt.genSalt(10);
     admin.password = await bcrypt.hash(newPassword, salt);
 
@@ -41,7 +97,7 @@ exports.changeAdminPassword = async (req, res) => {
     res.json({ message: "Password updated successfully" });
   } catch (error) {
     logger.error(
-      `Error changing admin password for ${admin.username}: ${error.message}`
+      `Error changing admin password for admin ID ${adminId}: ${error.message}`
     );
     console.error("Error in changeAdminPassword:", error);
     res.status(500).json({ message: "Server error" });
