@@ -924,3 +924,46 @@
 2024-11-25 12:14:32 - info: User ri logged in successfully
 2024-11-25 12:30:51 - error: CAPTCHA answer incorrect for ADMIN
 2024-11-25 12:51:37 - info: User ADMIN logged in successfully
+2024-11-29 17:01:12 - info: User ADMIN logged in successfully
+2024-11-29 17:01:18 - info: User created: MAX
+2024-11-29 17:01:21 - info: User deleted: ri
+2024-11-29 17:01:23 - info: User deleted: ko
+2024-11-29 17:01:30 - info: User MAX logged in successfully
+2024-11-29 17:02:08 - info: User ADMIN logged in successfully
+2024-11-29 17:02:11 - info: User created: JO
+2024-11-29 17:02:19 - info: User JO logged in successfully
+2024-11-29 17:06:34 - error: Error verifying cipher for user 6749e58381cdc17be7433d0a: CAESAR_SHIFT is not defined
+2024-11-29 17:06:36 - error: Error verifying cipher for user 6749e58381cdc17be7433d0a: CAESAR_SHIFT is not defined
+2024-11-29 17:06:36 - error: Error verifying cipher for user 6749e58381cdc17be7433d0a: CAESAR_SHIFT is not defined
+2024-11-29 17:06:36 - error: Error verifying cipher for user 6749e58381cdc17be7433d0a: CAESAR_SHIFT is not defined
+2024-11-29 17:06:36 - error: Error verifying cipher for user 6749e58381cdc17be7433d0a: CAESAR_SHIFT is not defined
+2024-11-29 17:06:38 - error: Error verifying cipher for user 6749e58381cdc17be7433d0a: CAESAR_SHIFT is not defined
+2024-11-29 17:08:55 - error: Error verifying cipher for user 6749e58381cdc17be7433d0a: CAESAR_SHIFT is not defined
+2024-11-29 17:08:59 - error: Error verifying cipher for user 6749e58381cdc17be7433d0a: CAESAR_SHIFT is not defined
+2024-11-29 17:10:20 - info: User MAX logged in successfully
+2024-11-29 17:10:50 - error: Error verifying cipher for user 6749e54e9dcd77312a7ab965: CAESAR_SHIFT is not defined
+2024-11-29 17:10:51 - error: Error verifying cipher for user 6749e54e9dcd77312a7ab965: CAESAR_SHIFT is not defined
+2024-11-29 17:12:58 - error: Błąd podczas weryfikacji szyfru dla użytkownika 6749e54e9dcd77312a7ab965: CAESAR_SHIFT is not defined
+2024-11-29 17:14:58 - info: Użytkownik MAX rozwiązał szyfr pomyślnie.
+2024-11-29 17:15:17 - info: User MAX logged in successfully
+2024-11-29 17:16:34 - info: User ADMIN logged in successfully
+2024-11-29 17:16:37 - info: User created: BO
+2024-11-29 17:16:43 - info: User BO logged in successfully
+2024-11-29 17:16:57 - info: Użytkownik BO rozwiązał szyfr pomyślnie.
+2024-11-29 17:17:05 - info: User BO logged in successfully
+2024-11-29 17:17:22 - info: User ADMIN logged in successfully
+2024-11-29 17:17:26 - info: User created: KTO
+2024-11-29 17:17:33 - info: User BO logged in successfully
+2024-11-29 17:17:37 - info: User KTO logged in successfully
+2024-11-29 17:26:35 - info: User ADMIN logged in successfully
+2024-11-29 17:26:38 - info: User created: BU
+2024-11-29 17:26:42 - info: User BU logged in successfully
+2024-11-29 17:26:55 - info: User BU logged in successfully
+2024-11-29 17:27:09 - info: Użytkownik BU rozwiązał szyfr pomyślnie.
+2024-11-29 17:27:20 - info: User BU logged in successfully
+2024-11-29 17:28:28 - error: CAPTCHA answer incorrect for ADMIN
+2024-11-29 17:28:38 - info: User ADMIN logged in successfully
+2024-11-29 17:28:41 - info: User created: MAN
+2024-11-29 17:28:47 - info: User MAN logged in successfully
+2024-11-29 17:29:02 - info: Użytkownik MAN rozwiązał szyfr pomyślnie.
+2024-11-29 17:29:09 - info: User MAN logged in successfully

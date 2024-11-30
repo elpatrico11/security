@@ -15,10 +15,20 @@ const UserSchema = new mongoose.Schema({
   requireSpecialChar: { type: Boolean, default: false },
   isFirstLogin: { type: Boolean, default: true },
   sessionTimeoutDuration: { type: Number, default: 15 * 60 * 1000 }, // Default to 15 minutes in milliseconds
-
-  // New fields for tracking failed login attempts
   failedLoginAttempts: { type: Number, default: 0 },
   lockUntil: { type: Date, default: null },
+  hasSolvedCipher: {
+    type: Boolean,
+    default: false,
+  },
+  cipherWordEncrypted: {
+    type: String,
+    default: null,
+  },
+  cipherShift: {
+    type: Number,
+    default: null,
+  },
 });
 
 // Password matching method

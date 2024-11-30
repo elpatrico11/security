@@ -1,9 +1,154 @@
-// controllers/userController.js
-
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const logger = require("../logger");
 const axios = require("axios");
+
+const CAESAR_SHIFT = 4;
+
+// Funkcja do generowania szyfru Cezara
+const generateCaesarCipher = () => {
+  const words = [
+    "encyklopedia",
+    "programowanie",
+    "informatyka",
+    "komunikacja",
+    "interfejs",
+    "algorytmika",
+    "deweloper",
+    "bezpieczeństwo",
+    "aplikacja",
+    "serwerowy",
+  ];
+  // Stałe przesunięcie dla szyfru Cezara
+
+  // Wybierz losowe słowo o długości co najmniej 10 liter
+  const filteredWords = words.filter((word) => word.length >= 10);
+  const randomIndex = Math.floor(Math.random() * filteredWords.length);
+  const selectedWord = filteredWords[randomIndex];
+
+  // Szyfr Cezara z przesunięciem 4
+  const caesarCipher = (str, shift) => {
+    return str.replace(/[a-zA-Z]/g, function (char) {
+      const start = char === char.toUpperCase() ? 65 : 97;
+      return String.fromCharCode(
+        ((char.charCodeAt(0) - start + shift) % 26) + start
+      );
+    });
+  };
+
+  const encryptedWord = caesarCipher(selectedWord, CAESAR_SHIFT);
+
+  return { encryptedWord };
+};
+
+// Funkcja do generowania szyfru dla użytkownika
+exports.generateCipherForUser = async (req, res) => {
+  const userId = req.user.id;
+
+  try {
+    const user = await User.findById(userId);
+
+    if (!user) {
+      logger.error(`User not found for ID ${userId}`);
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    if (user.hasSolvedCipher) {
+      return res.status(200).json({ message: "Cipher already solved" });
+    }
+
+    const { encryptedWord } = generateCaesarCipher();
+
+    user.cipherWordEncrypted = encryptedWord;
+    await user.save();
+
+    res.json({ encryptedWord });
+  } catch (error) {
+    logger.error(
+      `Error generating cipher for user ${userId}: ${error.message}`
+    );
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
+// Funkcja do odszyfrowania szyfru Cezara
+const decryptCaesarCipher = (encryptedStr, shift) => {
+  return encryptedStr.replace(/[a-zA-Z]/g, function (char) {
+    const start = char === char.toUpperCase() ? 65 : 97;
+    // Dodaj 26, aby uniknąć ujemnych wartości
+    return String.fromCharCode(
+      ((char.charCodeAt(0) - start - shift + 26) % 26) + start
+    );
+  });
+};
+
+exports.verifyCipherSolution = async (req, res) => {
+  const userId = req.user?.id; // Użycie operatora optional chaining
+  const { decryptedWord } = req.body;
+
+  try {
+    if (!userId) {
+      logger.error("Nie znaleziono ID użytkownika w żądaniu");
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+
+    if (!decryptedWord) {
+      logger.warn(`Użytkownik ${userId} nie podał decryptedWord`);
+      return res.status(400).json({ message: "Decrypted word is required" });
+    }
+
+    const user = await User.findById(userId);
+
+    if (!user) {
+      logger.error(`Użytkownik nie znaleziony dla ID ${userId}`);
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    if (user.hasSolvedCipher) {
+      logger.info(`Użytkownik ${user.username} już rozwiązał szyfr`);
+      return res.status(200).json({ message: "Cipher already solved" });
+    }
+
+    const { cipherWordEncrypted } = user;
+
+    if (!cipherWordEncrypted) {
+      logger.error(`Użytkownik ${user.username} nie ma szyfru do weryfikacji`);
+      return res
+        .status(400)
+        .json({ message: "No cipher found for verification" });
+    }
+
+    const decryptedCipher = decryptCaesarCipher(
+      cipherWordEncrypted,
+      CAESAR_SHIFT
+    );
+    logger.debug(
+      `Odszyfrowane słowo: ${decryptedCipher}, Wpisane słowo: ${decryptedWord}`
+    );
+
+    if (decryptedCipher.toLowerCase() === decryptedWord.toLowerCase()) {
+      user.hasSolvedCipher = true;
+      user.cipherWordEncrypted = null;
+      await user.save();
+
+      logger.info(`Użytkownik ${user.username} rozwiązał szyfr pomyślnie.`);
+      return res.json({ message: "Cipher solved successfully" });
+    } else {
+      logger.warn(
+        `Użytkownik ${user.username} podał niepoprawne rozwiązanie szyfru.`
+      );
+      return res
+        .status(400)
+        .json({ message: "Incorrect solution. Please try again." });
+    }
+  } catch (error) {
+    logger.error(
+      `Błąd podczas weryfikacji szyfru dla użytkownika ${userId}: ${error.message}`
+    );
+    console.error(error); // Dodatkowe logowanie do konsoli
+    res.status(500).json({ message: "Server error" });
+  }
+};
 
 const RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
 
@@ -168,6 +313,7 @@ exports.getUserStatus = async (req, res) => {
       requireUpperCase: user.requireUpperCase,
       requireLowerCase: user.requireLowerCase,
       requireSpecialChar: user.requireSpecialChar,
+      hasSolvedCipher: user.hasSolvedCipher, // Dodane pole
     });
   } catch (error) {
     res.status(500).json({ message: "Server error" });
